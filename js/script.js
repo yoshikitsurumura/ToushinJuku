@@ -77,7 +77,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     if (document.getElementById('hero-title')) {
         const typed = new Typed('#hero-title', {
-            strings: ['秋田発！<br>AI×個別で伸ばすオンライン塾'],
+            strings: ['秋田発オンライン専門塾<br><span class="hero-highlight">AI×個別指導</span>で志望校合格へ'],
             typeSpeed: 80,
             startDelay: 500,
             loop: false,
