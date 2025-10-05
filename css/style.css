@@ -201,6 +201,23 @@ section {
     overflow: hidden; /* particles.jsがはみ出さないように */
 }
 
+#hero #hero-title {
+    font-size: clamp(3rem, 6vw, 4.2rem);
+    letter-spacing: 0.08em;
+    line-height: 1.25;
+}
+
+.hero-lead {
+    font-size: 1.2rem;
+    color: #495057;
+    margin-top: 1rem;
+}
+
+.hero-highlight {
+    color: var(--accent-color);
+    font-weight: 800;
+}
+
 #particles-js {
     position: absolute;
     width: 100%;
@@ -238,19 +255,82 @@ section {
     color: var(--white);
 }
 
+.glass-box .eyebrow {
+    font-size: 0.85rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 0.75rem;
+}
+
 .glass-box .alert-heading {
     color: var(--white);
     letter-spacing: 0.05em;
-    padding-bottom: 0.75rem;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    margin-bottom: 0.75rem;
 }
 
-.glass-box .alert-heading .bi-stars {
-    color: #FFD700; /* Gold color for the icon */
+.glass-box .lead {
+    color: rgba(255, 255, 255, 0.95);
 }
 
-.glass-box hr {
-    border-top: 1px solid rgba(255, 255, 255, 0.3);
+.glass-box .text-emphasis {
+    font-weight: 700;
+    background: rgba(255, 255, 255, 0.18);
+    padding: 0.1rem 0.35rem;
+    border-radius: 6px;
+}
+
+.hero-benefits {
+    list-style: none;
+    padding-left: 0;
+    margin: 0 0 1.5rem 0;
+    display: grid;
+    gap: 0.35rem;
+}
+
+.hero-benefits li::before {
+    content: '';
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    margin-right: 8px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.65);
+    vertical-align: middle;
+}
+
+.hero-benefits li {
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.glass-box .notice {
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.75);
+    margin-top: 1rem;
+}
+
+.hero-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.benefit-chip {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.6rem 1.4rem;
+    border-radius: 999px;
+    background: linear-gradient(135deg, rgba(13, 71, 161, 0.12), rgba(13, 71, 161, 0.28));
+    color: var(--primary-color);
+    font-weight: 600;
+    border: 1px solid rgba(13, 71, 161, 0.25);
+    backdrop-filter: blur(6px);
+}
+
+.hero-visual {
+    object-fit: cover;
 }
 
 #hero .badge {
