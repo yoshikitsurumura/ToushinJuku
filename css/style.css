@@ -199,23 +199,7 @@ section {
     min-height: 90vh;
     position: relative; /* particles.jsのために必要 */
     overflow: hidden; /* particles.jsがはみ出さないように */
-}
-
-#hero #hero-title {
-    font-size: clamp(3rem, 6vw, 4.2rem);
-    letter-spacing: 0.08em;
-    line-height: 1.25;
-}
-
-.hero-lead {
-    font-size: 1.2rem;
-    color: #495057;
-    margin-top: 1rem;
-}
-
-.hero-highlight {
-    color: var(--accent-color);
-    font-weight: 800;
+    padding: 60px 0;
 }
 
 #particles-js {
@@ -232,112 +216,24 @@ section {
     z-index: 2; /* particles.jsより手前に */
 }
 
-@keyframes animated-gradient {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
-.glass-box {
-    background: rgba(13, 71, 161, 0.55);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border-radius: var(--border-radius);
-    border: 1px solid rgba(255, 255, 255, 0.18);
-    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
-    padding: 2rem;
-    color: var(--white);
-}
-
-.glass-box .eyebrow {
-    font-size: 0.85rem;
-    letter-spacing: 0.25em;
-    text-transform: uppercase;
-    color: rgba(255, 255, 255, 0.7);
-    margin-bottom: 0.75rem;
-}
-
-.glass-box .alert-heading {
-    color: var(--white);
-    letter-spacing: 0.05em;
-    margin-bottom: 0.75rem;
-}
-
-.glass-box .lead {
-    color: rgba(255, 255, 255, 0.95);
-}
-
-.glass-box .text-emphasis {
-    font-weight: 700;
-    background: rgba(255, 255, 255, 0.18);
-    padding: 0.1rem 0.35rem;
-    border-radius: 6px;
-}
-
-.hero-benefits {
-    list-style: none;
-    padding-left: 0;
-    margin: 0 0 1.5rem 0;
-    display: grid;
-    gap: 0.35rem;
-}
-
-.hero-benefits li::before {
-    content: '';
-    display: inline-block;
-    width: 8px;
-    height: 8px;
-    margin-right: 8px;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.65);
-    vertical-align: middle;
-}
-
-.hero-benefits li {
-    font-weight: 500;
-    color: rgba(255, 255, 255, 0.9);
-}
-
-.glass-box .notice {
-    font-size: 0.85rem;
-    color: rgba(255, 255, 255, 0.75);
-    margin-top: 1rem;
-}
-
-.hero-chips {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.75rem;
-}
-
-.benefit-chip {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0.6rem 1.4rem;
-    border-radius: 999px;
-    background: linear-gradient(135deg, rgba(13, 71, 161, 0.12), rgba(13, 71, 161, 0.28));
+#hero h1 {
     color: var(--primary-color);
-    font-weight: 600;
-    border: 1px solid rgba(13, 71, 161, 0.25);
-    backdrop-filter: blur(6px);
 }
 
-.hero-visual {
-    object-fit: cover;
+#hero .lead {
+    font-size: 1.25rem;
 }
 
-#hero .badge {
-    padding: 0.5em 1em;
-    font-weight: 600;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    border: 1px solid rgba(0,0,0,0.05);
+.btn-warning {
+    background-color: var(--accent-color);
+    color: var(--white);
+    border-color: var(--accent-color);
+}
+
+.btn-warning:hover {
+    background-color: #e66e00; /* 少し濃いオレンジ */
+    border-color: #e66e00;
+    color: var(--white);
 }
 
 
@@ -360,21 +256,6 @@ section {
     transform: translateY(-3px);
     box-shadow: var(--soft-shadow);
     border-color: var(--primary-color);
-}
-
-.feature-icon {
-    width: 60px;
-    height: 60px;
-    margin: 0 auto 20px auto;
-    background-color: var(--green-bg);
-    border-radius: 50%;
-    display: grid;
-    place-items: center;
-    color: var(--primary-color);
-}
-.feature-icon svg {
-    width: 32px;
-    height: 32px;
 }
 
 .feature-card h3 {
@@ -457,41 +338,11 @@ section {
     font-weight: 800;
 }
 
-.pricing-card .price .tax-note {
-    color: var(--muted);
-    font-size: 1rem;
-    font-weight: 500;
-}
-
 .pricing-card .list-group-item {
     background-color: transparent;
     padding: 1rem 0;
     display: flex;
     align-items: center;
-}
-
-.pricing-card .badge {
-    background-color: var(--accent-color);
-    color: var(--white);
-    border-radius: 999px;
-    padding: 0.8rem 1.5rem;
-    font-weight: 700;
-    animation: pulse 2.5s infinite ease-in-out;
-}
-
-@keyframes pulse {
-  0% {
-    transform: scale(1);
-    box-shadow: 0 4px 12px rgba(255, 122, 0, 0.3);
-  }
-  50% {
-    transform: scale(1.05);
-    box-shadow: 0 6px 20px rgba(255, 122, 0, 0.4);
-  }
-  100% {
-    transform: scale(1);
-    box-shadow: 0 4px 12px rgba(255, 122, 0, 0.3);
-  }
 }
 
 /* 6. Teacher */

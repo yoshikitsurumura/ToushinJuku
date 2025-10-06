@@ -9,7 +9,7 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
         <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
         <link rel="stylesheet" href="css/style.css">
-        <link rel="icon" href="images/logo.png" type="image/png">
+        <link rel="icon" href="images/icon.png" type="image/png">
         <link rel="canonical" href="https://yoshikitsurumura.github.io/akita_online_juku/">
         <meta name="theme-color" content="#0D47A1">
         <meta name="robots" content="index,follow">
@@ -58,36 +58,66 @@
         <section id="hero">
             <div id="particles-js"></div>
             <div class="container">
-                <div class="text-center mb-4" data-aos="zoom-in">
-                    <img src="images/icon.png" alt="塾のロゴ" style="width: 100px;">
-                </div>
-                <div class="row mb-5">
-                    <div class="col-12 text-center">
-                        <h1 class="fw-bold" id="hero-title"></h1>
-                        <p class="hero-lead">AIで最適化した学習計画と専属コーチの伴走で、志望校合格まで最短距離で導きます。</p>
+                <div class="row align-items-center justify-content-center py-5">
+                    <div class="col-lg-6 col-md-10 text-center text-lg-start">
+                        <img src="images/icon.png" alt="塾のロゴ" style="width: 80px; margin-bottom: 1rem;" data-aos="zoom-in">
+                        <h1 class="fw-bolder display-4 mb-2" id="hero-title" data-aos="fade-right"></h1>
+                        <p class="lead fw-bold text-primary mb-4" data-aos="fade-right" data-aos-delay="100">秋田発！</p>
+
+                        <div class="card shadow-lg" data-aos="fade-up" data-aos-delay="200" style="background-color: #4A6D8C; color: white;">
+                            <div class="card-body p-4">
+                                <h4 class="fw-bold"><i class="bi bi-stars text-warning"></i> 特別キャンペーン実施中！</h4>
+                                <p class="mt-3">今なら、<strong>入会金(通常10,000円)</strong>と<strong>体験授業</strong>が無料になります。</p>
+                                <p class="small" style="color: #E0E0E0;">※先着20名様限定。お見逃しなく！</p>
+                                <div class="d-flex justify-content-center justify-content-lg-start gap-2 my-3">
+                                    <span class="btn btn-info disabled"><i class="bi bi-gift-fill me-1"></i>入会金無料</span>
+                                    <span class="btn btn-info disabled"><i class="bi bi-calendar-check-fill me-1"></i>体験授業無料</span>
+                                </div>
+                                <a href="#cta" class="btn btn-warning btn-lg w-100 fw-bold shadow-sm">今すぐLINEで体験授業を申し込む <i class="bi bi-arrow-right-circle-fill"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-10 mt-5 mt-lg-0" data-aos="fade-left" data-aos-delay="300">
+                        <div class="p-3 bg-white rounded-4 shadow-lg">
+                            <img src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?q=80&w=2070&auto=format&fit=crop" class="img-fluid rounded-3" alt="オンラインで学習する学生">
+                        </div>
                     </div>
                 </div>
-                <div class="row align-items-center">
-                    <div class="col-lg-6" data-aos="fade-right">
-                        <div class="glass-box" data-aos="fade-right">
-                            <p class="eyebrow">SPRING 2025 CAMPAIGN</p>
-                            <h4 class="alert-heading">特別キャンペーン実施中</h4>
-                            <p class="lead mb-3">今だけ<strong class="text-emphasis">入会金（通常10,000円）</strong>と<strong class="text-emphasis">体験授業</strong>が無料に。最先端の学習体験を気軽にお試しください。</p>
-                            <ul class="hero-benefits mb-0">
-                                <li>完全オンラインで全国どこからでも参加</li>
-                                <li>一人ひとりに合わせた個別学習プラン</li>
-                                <li>学習データを活かした進路アドバイス</li>
-                            </ul>
-                            <p class="notice">※先着20名様限定。定員になり次第終了します。</p>
-                        </div>
-                        <div class="hero-chips mb-4">
-                             <span class="benefit-chip">入会金 0円</span>
-                             <span class="benefit-chip">初回カウンセリング無料</span>
-                        </div>
-                        <a href="#cta" class="btn btn-primary btn-lg shadow">今すぐLINEで体験授業を申し込む <i class="bi bi-arrow-right-circle-fill"></i></a>
+            </div>
+        </section>
+
+        <!-- Strengths Section -->
+        <section id="strengths" class="bg-light">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h2 data-aos="fade-up">秋田オンライン塾の圧倒的な強み</h2>
+                    <p class="lead text-muted" data-aos="fade-up" data-aos-delay="100">私たちは、生徒一人ひとりの可能性を最大限に引き出すための最適な環境を提供します。</p>
+                </div>
+                <div class="row align-items-center mb-5" data-aos="fade-up" data-aos-delay="200">
+                    <div class="col-md-6">
+                        <img src="https://images.unsplash.com/photo-1516542076529-1ea3854896f2?q=80&w=2071&auto=format&fit=crop" alt="AIと人間によるハイブリッド指導" class="img-fluid rounded-3 shadow">
                     </div>
-                    <div class="col-lg-6" data-aos="fade-left">
-                        <img src="https://images.unsplash.com/photo-1523580846011-d3a5bc25702b?auto=format&fit=crop&w=1080&q=80" class="img-fluid rounded-4 shadow-lg hero-visual" alt="オンラインで学習する高校生">
+                    <div class="col-md-6 ps-md-5 mt-4 mt-md-0">
+                        <h3><span class="text-primary">01.</span> AI と人の力の融合</h3>
+                        <p>AIが生成する最適な学習計画と、経験豊富なプロ講師による血の通った個別指導を組み合わせることで、学習効率を最大化。生徒のわずかなつまずきも見逃さず、着実な学力向上を実現します。</p>
+                    </div>
+                </div>
+                <div class="row align-items-center mb-5" data-aos="fade-up" data-aos-delay="300">
+                    <div class="col-md-6 order-md-2">
+                        <img src="https://images.unsplash.com/photo-1554415707-6e8cfc93fe23?q=80&w=2070&auto=format&fit=crop" alt="オンラインでの柔軟な学習" class="img-fluid rounded-3 shadow">
+                    </div>
+                    <div class="col-md-6 pe-md-5 mt-4 mt-md-0 order-md-1">
+                        <h3><span class="text-primary">02.</span> 場所を選ばないオンライン完結型</h3>
+                        <p>全国どこからでも受講可能な完全オンライン指導。通塾にかかる時間や労力をなくし、部活動や他の習い事との両立をサポート。生徒が最も集中できる環境で学習を進められます。</p>
+                    </div>
+                </div>
+                <div class="row align-items-center" data-aos="fade-up" data-aos-delay="400">
+                    <div class="col-md-6">
+                        <img src="https://images.unsplash.com/photo-1556742502-ec7c0e9f34b1?q=80&w=2070&auto=format&fit=crop" alt="柔軟なスケジュール" class="img-fluid rounded-3 shadow">
+                    </div>
+                    <div class="col-md-6 ps-md-5 mt-4 mt-md-0">
+                        <h3><span class="text-primary">03.</span> 柔軟なスケジュールと万全のサポート</h3>
+                        <p>学習リズムを作りやすい固定時間割を基本としつつ、急な予定にも対応できる振替制度を完備。さらにLINEで365日質問対応。学習の遅れや疑問点を持ち越させません。</p>
                     </div>
                 </div>
             </div>
@@ -96,12 +126,12 @@
         <!-- 2. Features Section -->
         <section id="features">
             <div class="container">
-                <h2 data-aos="fade-up">当塾の3つの特徴</h2>
+                <h2 data-aos="fade-up">秋田オンライン塾が選ばれる理由</h2>
                 <div class="row g-4">
                     <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
                         <div class="feature-card h-100">
-                            <div class="feature-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 8a3 3 0 0 0-3 3v2a3 3 0 0 0 6 0v-2a3 3 0 0 0-3-3Z"/><path d="M12 14a3 3 0 0 0-3 3v2"/><path d="M12 2a3 3 0 0 0-3 3"/><path d="M12 22a3 3 0 0 0 3-3"/><path d="M2 12a3 3 0 0 0 3 3h2a3 3 0 0 0 0-6H5a3 3 0 0 0-3 3Z"/><path d="M22 12a3 3 0 0 0-3-3h-2a3 3 0 0 0 0 6h2a3 3 0 0 0 3-3Z"/></svg>
+                            <div class="mb-3 text-primary">
+                               <i class="bi bi-cpu-fill display-4"></i>
                             </div>
                             <h3>AI＋人のハイブリッド</h3>
                             <p>AIによる最適な学習計画と、経験豊富な講師による個別指導を組み合わせ、効率的に学力を伸ばします。</p>
@@ -109,8 +139,8 @@
                     </div>
                     <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
                         <div class="feature-card h-100">
-                            <div class="feature-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="3" rx="2"/><line x1="8" x2="16" y1="21" y2="21"/><line x1="12" x2="12" y1="17" y2="21"/></svg>
+                            <div class="mb-3 text-primary">
+                                <i class="bi bi-display-fill display-4"></i>
                             </div>
                             <h3>完全オンライン・通塾不要</h3>
                             <p>全国どこからでも受講可能。通塾の必要がなく、部活動や他の習い事とも両立しやすい環境です。</p>
@@ -118,8 +148,8 @@
                     </div>
                     <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
                         <div class="feature-card h-100">
-                            <div class="feature-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/><path d="m9 16 2 2 4-4"/></svg>
+                            <div class="mb-3 text-primary">
+                                <i class="bi bi-calendar2-check-fill display-4"></i>
                             </div>
                             <h3>固定時間割＋振替OK</h3>
                             <p>学習リズムを作りやすい固定時間割制。急な予定が入っても、柔軟に振替対応が可能です。</p>
@@ -255,31 +285,40 @@
         <!-- 5. Pricing Section -->
         <section id="pricing" class="bg-light">
             <div class="container">
-                <h2 data-aos="fade-up">料金プラン</h2>
-                <div class="row justify-content-center">
-                    <div class="col-lg-8" data-aos="fade-up" data-aos-delay="100">
+                <div class="text-center">
+                    <h2 data-aos="fade-up">シンプルで分かりやすい料金プラン</h2>
+                    <p class="lead text-muted" data-aos="fade-up" data-aos-delay="100">追加費用は一切不要。安心して学習に集中できる環境をご提供します。</p>
+                </div>
+                <div class="row justify-content-center mt-5">
+                    <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
                         <div class="card shadow-lg pricing-card">
-                            <div class="card-header text-center py-4">
+                            <div class="card-header bg-primary text-white text-center py-4">
                                 <h3 class="mb-0">月額基本プラン</h3>
-                                <p class="text-muted mb-0">すべてのサポートが含まれた安心のプランです</p>
                             </div>
-                            <div class="card-body p-5">
+                            <div class="card-body p-4 p-md-5">
                                 <div class="text-center mb-4">
-                                    <p class="price display-3">20,000<span class="fs-4">円</span><span class="tax-note">/月（税込）</span></p>
-                                    <p class="fw-bold text-success">追加費用は一切ありません</p>
+                                    <p class="price display-4 fw-bolder">20,000<span class="fs-4 fw-normal">円</span><span class="fs-6 fw-normal">/月（税込）</span></p>
+                                    <span class="badge bg-success-subtle text-success-emphasis rounded-pill px-3 py-2">＼ 今なら入会金10,000円が無料！ ／</span>
                                 </div>
-                                <ul class="list-group list-group-flush fs-5">
-                                    <li class="list-group-item border-0"><i class="bi bi-check-circle-fill text-primary me-2"></i>オンライン個別指導</li>
-                                    <li class="list-group-item border-0"><i class="bi bi-check-circle-fill text-primary me-2"></i>全授業の録画視聴</li>
-                                    <li class="list-group-item border-0"><i class="bi bi-check-circle-fill text-primary me-2"></i>柔軟な振替対応</li>
-                                    <li class="list-group-item border-0"><i class="bi bi-check-circle-fill text-primary me-2"></i>LINEでの365日質問対応</li>
-                                </ul>
-                                <div class="text-center mt-4">
-                                    <span class="badge fs-5">今なら入会金（通常10,000円）が無料！</span>
+                                <h4 class="text-center h5 mb-4">全てのサポートが含まれています</h4>
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item border-0 bg-transparent"><i class="bi bi-check-circle-fill text-primary me-2"></i>オンライン個別指導</li>
+                                            <li class="list-group-item border-0 bg-transparent"><i class="bi bi-check-circle-fill text-primary me-2"></i>全授業の録画視聴</li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item border-0 bg-transparent"><i class="bi bi-check-circle-fill text-primary me-2"></i>柔軟な振替対応</li>
+                                            <li class="list-group-item border-0 bg-transparent"><i class="bi bi-check-circle-fill text-primary me-2"></i>LINEでの365日質問対応</li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="card-footer text-center text-muted py-3">
-                                <p class="mb-0">お支払い方法：銀行振込・各種QR決済</p>
+                            <div class="card-footer text-center p-4">
+                                <a href="#cta" class="btn btn-warning btn-lg fw-bold">さっそく体験授業を申し込む</a>
+                                <p class="text-muted small mt-3 mb-0">お支払い方法：銀行振込・各種QR決済</p>
                             </div>
                         </div>
                     </div>
@@ -290,24 +329,64 @@
         <!-- 6. Teacher Section -->
         <section id="teacher" class="bg-light">
             <div class="container">
-                <h2 class="mb-5" data-aos="fade-up">講師紹介</h2>
-                <div class="card border-0 shadow-lg teacher-card" data-aos="fade-up">
-                    <div class="row g-0 align-items-center">
-                        <div class="col-md-4">
-                            <img src="https://images.unsplash.com/photo-1521587760476-6c12a4b040da?q=80&w=2070&auto=format&fit=crop" class="img-fluid rounded-start teacher-card-img" alt="講師のプロフィール写真">
-                        </div>
-                        <div class="col-md-8">
-                            <div class="card-body p-5">
-                                <h3 class="card-title">鶴村 佳輝 <span class="text-muted fs-5">(Yoshiki Tsurumura)</span></h3>
-                                <p class="lead text-primary fw-bold">代表講師 / AI教育コンサルタント</p>
-                                <p class="card-text mb-4">AIの力と大手塾で培った指導経験で、一人ひとりの最適な学びを設計します。秋田から全国へ、最新の教育を提供します。</p>
-                                <ul class="list-unstyled fs-5">
-                                    <li class="mb-2"><i class="bi bi-patch-check-fill text-primary me-2"></i><strong>大手個別指導塾 元・副教室長</strong> (指導生徒260名以上)</li>
-                                    <li class="mb-2"><i class="bi bi-patch-check-fill text-primary me-2"></i><strong>AIを活用した学習計画</strong>で、生徒の成績を飛躍的に向上</li>
-                                    <li class="mb-2"><i class="bi bi-patch-check-fill text-primary me-2"></i><strong>業務改善・DXツール</strong>の開発経験 (Python, GAS)</li>
-                                </ul>
+                <h2 class="mb-5" data-aos="fade-up">経験豊富な講師陣</h2>
+                <div class="row g-4 justify-content-center">
+                    <!-- Main Teacher: Tsurumura -->
+                    <div class="col-lg-6" data-aos="fade-up">
+                        <div class="card border-0 shadow-lg teacher-card h-100">
+                             <div class="row g-0 align-items-center">
+                                <div class="col-md-4">
+                                    <img src="https://images.unsplash.com/photo-1521587760476-6c12a4b040da?q=80&w=2070&auto=format&fit=crop" class="img-fluid rounded-start teacher-card-img" alt="代表講師の写真">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-body p-4">
+                                        <h3 class="card-title">鶴村 佳輝 <span class="text-muted fs-6">(Yoshiki Tsurumura)</span></h3>
+                                        <p class="lead text-primary fw-bold small">代表講師 / AI教育コンサルタント</p>
+                                        <p class="card-text small mb-3">AIの力と大手塾で培った指導経験で、一人ひとりの最適な学びを設計します。</p>
+                                        <ul class="list-unstyled fs-6">
+                                            <li class="mb-1"><i class="bi bi-patch-check-fill text-primary me-2"></i>大手個別指導塾 元・副教室長</li>
+                                            <li class="mb-1"><i class="bi bi-patch-check-fill text-primary me-2"></i>AI活用による成績向上</li>
+                                            <li class="mb-1"><i class="bi bi-patch-check-fill text-primary me-2"></i>業務改善・DXツール開発経験</li>
+                                        </ul>
+                                    </div>
+                                </div>
                             </div>
                         </div>
+                    </div>
+                    <!-- New Teacher -->
+                    <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+                        <div class="card border-0 shadow-lg teacher-card h-100">
+                            <div class="row g-0 align-items-center">
+                                <div class="col-md-4">
+                                    <img src="https://images.unsplash.com/photo-1584515933487-779824d27929?q=80&w=2070&auto=format&fit=crop" class="img-fluid rounded-start teacher-card-img" alt="女性講師の写真">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-body p-4">
+                                        <h3 class="card-title">女性講師A</h3>
+                                        <p class="lead text-primary fw-bold small">看護・医療系指導担当</p>
+                                        <p class="card-text small mb-3">大手塾「森塾」で培ったノウハウを活かし、丁寧な指導で目標達成をサポートします。</p>
+                                        <ul class="list-unstyled fs-6">
+                                            <li class="mb-1"><i class="bi bi-patch-check-fill text-primary me-2"></i><strong>現役の看護師・助産師大学院生</strong></li>
+                                            <li class="mb-1"><i class="bi bi-patch-check-fill text-primary me-2"></i><strong>塾講師歴6年</strong>の経験</li>
+                                            <li class="mb-1"><i class="bi bi-patch-check-fill text-primary me-2"></i>医療系専門科目に強い</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Other Teachers -->
+                <div class="mt-5 text-center" data-aos="fade-up" data-aos-delay="200">
+                    <h3 class="h4">その他、多彩な専門講師が在籍</h3>
+                    <p class="text-muted">生徒一人ひとりの目標に合わせて、最適な講師が担当します。</p>
+                    <div class="d-flex flex-wrap justify-content-center gap-2 mt-4">
+                        <span class="badge bg-primary-subtle text-primary-emphasis rounded-pill px-3 py-2">高専生</span>
+                        <span class="badge bg-primary-subtle text-primary-emphasis rounded-pill px-3 py-2">英語特化講師</span>
+                        <span class="badge bg-primary-subtle text-primary-emphasis rounded-pill px-3 py-2">神戸大学大学院卒</span>
+                        <span class="badge bg-primary-subtle text-primary-emphasis rounded-pill px-3 py-2">関関同立卒業</span>
+                        <span class="badge bg-primary-subtle text-primary-emphasis rounded-pill px-3 py-2">現役国公立大生</span>
+                        <span class="badge bg-primary-subtle text-primary-emphasis rounded-pill px-3 py-2">現役4年生大学在学生</span>
                     </div>
                 </div>
             </div>
@@ -369,11 +448,12 @@
         <section id="cta">
             <div class="container text-center" data-aos="zoom-in">
                 <h2>本気で伸ばすなら、今すぐ。</h2>
-                <p>入会金無料キャンペーンは先着20名様限定です。お早めにお問い合わせください。</p>
-                <a href="#cta" class="btn btn-primary btn-lg">LINEで体験授業を申し込む</a>
-                <div class="qr-placeholder">
-                    <!-- QRコード画像を後で配置 -->
-                    <p>LINE QRコード</p>
+                <p class="lead">入会金無料キャンペーンは先着20名様限定です。お早めにお問い合わせください。</p>
+                <a href="#cta" class="btn btn-warning btn-lg fw-bold shadow-lg my-4">今すぐLINEで体験授業を申し込む <i class="bi bi-arrow-right-circle-fill"></i></a>
+                <div class="mt-4">
+                    <h4 class="h5 mb-3">LINE QRコードで簡単登録</h4>
+                    <img src="images/line_qr.png" alt="LINE QRコード" style="width: 150px; height: 150px; border: 5px solid white; border-radius: var(--border-radius); box-shadow: var(--shadow);">
+                    <p class="mt-2 text-muted">上のQRコードを読み取って、<br>「体験授業希望」とメッセージをお送りください。</p>
                 </div>
             </div>
         </section>
@@ -398,9 +478,10 @@
                 </div>
                 <div class="footer-contact">
                     <h3>お問い合わせ</h3>
-                    <p>所在地: 秋田県秋田市</p>
-                    <p>メール: <a href="mailto:info@akita-online.com">info@akita-online.com</a></p>
-                    <p>LINE: <a href="#" target="_blank">公式LINEで質問する</a></p>
+                    <p><i class="bi bi-geo-alt-fill me-2"></i>所在地: 秋田県秋田市</p>
+                    <p><i class="bi bi-envelope-fill me-2"></i>メール: <a href="mailto:crane7112@gmail.com">crane7112@gmail.com</a></p>
+                    <p><i class="bi bi-telephone-fill me-2"></i>電話: <a href="tel:09082002190">090-8200-2190</a></p>
+                    <p><i class="bi bi-line me-2"></i>LINE: <a href="#cta">LINEで質問する</a></p>
                 </div>
             </div>
             <div class="copyright">
