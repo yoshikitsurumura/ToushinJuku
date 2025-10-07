@@ -77,12 +77,11 @@
 document.addEventListener('DOMContentLoaded', () => {
     if (document.getElementById('hero-title')) {
         const typed = new Typed('#hero-title', {
-            strings: ['秋田発オンライン専門塾<br><span class="hero-highlight">AI×個別指導</span>で志望校合格へ'],
+            strings: ['AI×個別で伸ばす<br>オンライン塾'],
             typeSpeed: 80,
             startDelay: 500,
             loop: false,
-            showCursor: true,
-            cursorChar: '_',
+            showCursor: false,
             contentType: 'html',
         });
     }
