@@ -281,6 +281,11 @@ section {
 .service-icon-wrapper.color-4 { background-color: #BD10E0; } /* Purple */
 .service-icon-wrapper.color-5 { background-color: #7ED321; } /* Green */
 
+.service-icon-wrapper.support-color-1 { background-color: #55B3D9; } /* Light Blue */
+.service-icon-wrapper.support-color-2 { background-color: #F8B500; } /* Yellow */
+.service-icon-wrapper.support-color-3 { background-color: #9B59B6; } /* Amethyst */
+.service-icon-wrapper.support-color-4 { background-color: #E74C3C; } /* Red */
+
 
 .special-support {
 
@@ -293,19 +298,6 @@ section {
     margin-top: 40px;
     margin-bottom: 20px;
     font-weight: 600;
-}
-
-.support-card-custom {
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-}
-
-.support-card-custom:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--soft-shadow) !important;
-}
-
-.support-card-custom .fs-1 {
-    font-size: 3rem !important;
 }
 
 /* 4. Schedule */
