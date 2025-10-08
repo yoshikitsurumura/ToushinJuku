@@ -24,7 +24,8 @@ body {
     padding: 0;
     background-color: var(--bg-color);
     color: var(--text-color);
-    line-height: 1.7;
+    line-height: 1.8; /* Increased for better readability */
+    font-size: 17px; /* Increased base font size for better visibility */
 }
 
 * {
@@ -40,12 +41,12 @@ body {
 
 h1, h2, h3, h4 {
     color: var(--primary-color);
-    line-height: 1.4;
+    line-height: 1.5;
 }
 
-h1 { font-size: 2.8rem; letter-spacing: 0.04em; }
-h2 { font-size: 2.2rem; text-align: center; margin-bottom: 60px; letter-spacing: 0.05em; }
-h3 { font-size: 1.4rem; letter-spacing: 0.03em; }
+h1 { font-size: 3.0rem; letter-spacing: 0.04em; }
+h2 { font-size: 2.4rem; text-align: center; margin-bottom: 60px; letter-spacing: 0.05em; }
+h3 { font-size: 1.6rem; letter-spacing: 0.03em; }
 
 a {
     color: var(--accent-color);
@@ -281,6 +282,11 @@ section {
 .service-icon-wrapper.color-4 { background-color: #BD10E0; } /* Purple */
 .service-icon-wrapper.color-5 { background-color: #7ED321; } /* Green */
 
+.service-icon-wrapper.support-color-1 { background-color: #2ECC71; } /* Green */
+.service-icon-wrapper.support-color-2 { background-color: #F1C40F; } /* Yellow */
+.service-icon-wrapper.support-color-3 { background-color: #E74C3C; } /* Red */
+.service-icon-wrapper.support-color-4 { background-color: #3498DB; } /* Blue */
+
 
 .special-support {
 
@@ -295,37 +301,26 @@ section {
     font-weight: 600;
 }
 
-.support-card-custom {
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-}
-
-.support-card-custom:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--soft-shadow) !important;
-}
-
-.support-card-custom .fs-1 {
-    font-size: 3rem !important;
-}
-
 /* 4. Schedule */
-.schedule-table-custom {
+.schedule-card {
+    background-color: var(--white);
     border-radius: var(--border-radius);
-    overflow: hidden; /* for border-radius */
+    overflow: hidden;
 }
 
-.schedule-table-custom thead {
-    background-color: var(--primary-color);
-    color: var(--white);
+.schedule-header {
+    background-color: #e9ecef;
+    padding: 1rem 1.5rem;
+    font-size: 1.1rem;
 }
 
-.schedule-table-custom tbody tr {
-    transition: background-color 0.2s ease;
+.schedule-card .list-group-item {
+    padding: 1.25rem 1.5rem;
+    border-bottom: 1px solid #e9ecef;
 }
 
-.schedule-table-custom td, .schedule-table-custom th {
-    vertical-align: middle;
-    padding: 1rem;
+.schedule-card .list-group-item:last-child {
+    border-bottom: none;
 }
 
 /* 5. Pricing */
@@ -333,33 +328,34 @@ section {
     background-color: var(--light-gray);
 }
 
-.pricing-card {
+.pricing-card-new {
     border: none;
     border-radius: var(--border-radius);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.pricing-card:hover {
+.pricing-card-new:hover {
     transform: translateY(-5px);
     box-shadow: var(--soft-shadow);
 }
 
-.pricing-card .card-header {
+.pricing-card-new .card-header {
     background-color: var(--primary-color);
     color: var(--white);
     border-radius: var(--border-radius) var(--border-radius) 0 0;
 }
 
-.pricing-card .price {
+.pricing-card-new .price {
     color: var(--primary-color);
     font-weight: 800;
 }
 
-.pricing-card .list-group-item {
+.pricing-card-new .list-group-item {
     background-color: transparent;
-    padding: 1rem 0;
+    padding: 0.75rem 0;
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 /* 6. Teacher */
