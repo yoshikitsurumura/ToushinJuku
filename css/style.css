@@ -25,7 +25,7 @@ body {
     background-color: var(--bg-color);
     color: var(--text-color);
     line-height: 1.8; /* Increased for better readability */
-    font-size: 17px; /* Increased base font size for better visibility */
+    font-size: 18px; /* Increased base font size for better visibility */
 }
 
 * {
@@ -333,37 +333,46 @@ section {
 
 /* 5. Pricing */
 #pricing {
-    background-color: var(--light-gray);
+    background-color: var(--bg-color);
 }
 
-.pricing-card-new {
-    border: none;
+.pricing-card {
+    background-color: var(--white);
     border-radius: var(--border-radius);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: all 0.3s ease;
+    border: 1px solid #eef2f7;
 }
 
-.pricing-card-new:hover {
+.pricing-card:hover {
     transform: translateY(-5px);
     box-shadow: var(--soft-shadow);
 }
 
-.pricing-card-new .card-header {
-    background-color: var(--primary-color);
-    color: var(--white);
-    border-radius: var(--border-radius) var(--border-radius) 0 0;
+.pricing-card .card-header {
+    font-weight: bold;
 }
 
-.pricing-card-new .price {
+.pricing-card .price-tag {
     color: var(--primary-color);
-    font-weight: 800;
 }
 
-.pricing-card-new .list-group-item {
-    background-color: transparent;
-    padding: 0.75rem 0;
+.pricing-card ul {
+    padding-left: 0;
+}
+
+.pricing-card ul li {
+    margin-bottom: 12px;
     display: flex;
     align-items: center;
-    justify-content: center;
+}
+
+.pricing-card ul li .bi {
+    margin-right: 10px;
+    font-size: 1.2rem;
+}
+
+.pricing-card .btn {
+    width: 100%;
 }
 
 /* 6. Teacher */
