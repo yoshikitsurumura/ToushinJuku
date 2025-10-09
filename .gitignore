@@ -7,7 +7,7 @@
 credentials.json
 
 # Frontend configuration
-js/config.js
+# js/config.js
 
 # Build outputs
 dist/
