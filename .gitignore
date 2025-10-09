@@ -1,0 +1,22 @@
+# Environment variables
+.env
+.env.local
+
+# API keys and credentials
+*.key
+credentials.json
+
+# Frontend configuration
+js/config.js
+
+# Build outputs
+dist/
+build/
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS files
+.DS_Store
+Thumbs.db
