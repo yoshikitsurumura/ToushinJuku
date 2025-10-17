@@ -89,7 +89,8 @@
                 </div>
                 <div class="row g-4">
                     <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-                        <div class="reason-card text-center h-100 hover-lift">
+                        <div class="reason-card reason-card--01 text-center h-100 hover-lift">
+                            <span class="reason-pill">Point 01</span>
                             <div class="icon-circle soft-1">
                                 <i class="bi bi-lightning-charge-fill"></i>
                             </div>
@@ -98,7 +99,8 @@
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-                        <div class="reason-card text-center h-100 hover-lift">
+                        <div class="reason-card reason-card--02 text-center h-100 hover-lift">
+                            <span class="reason-pill">Point 02</span>
                             <div class="icon-circle soft-2">
                                 <i class="bi bi-people-fill"></i>
                             </div>
@@ -107,7 +109,8 @@
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-                        <div class="reason-card text-center h-100 hover-lift">
+                        <div class="reason-card reason-card--03 text-center h-100 hover-lift">
+                            <span class="reason-pill">Point 03</span>
                             <div class="icon-circle soft-3">
                                 <i class="bi bi-house-heart-fill"></i>
                             </div>
@@ -511,15 +514,18 @@
     <div id="ai-chat-widget">
         <!-- チャットボタン -->
         <button id="chat-toggle-btn" class="chat-toggle-btn" aria-label="AIチャットを開く">
-            <i class="bi bi-robot"></i>
+            <img src="images/akita-dog.svg" alt="秋田犬チャットアイコン" width="48" height="48" loading="lazy">
         </button>
 
         <!-- チャットウィンドウ -->
         <div id="chat-window" class="chat-window" style="display: none;">
             <div class="chat-header-widget">
-                <div>
-                    <i class="bi bi-robot me-2"></i>
-                    <strong>AIアシスタント</strong>
+                <div class="chat-branding">
+                    <img src="images/akita-dog.svg" alt="秋田犬のマスコット" class="chat-branding__icon" width="44" height="44" loading="lazy">
+                    <div class="chat-branding__text">
+                        <strong>秋田犬AIアシスタント</strong>
+                        <span>灯（あかり）ちゃんがご案内します</span>
+                    </div>
                 </div>
                 <button id="chat-close-btn" class="chat-close-btn" aria-label="チャットを閉じる">
                     <i class="bi bi-x-lg"></i>
@@ -528,13 +534,13 @@
             <div class="chat-messages" id="chat-messages">
                 <div class="bot-message">
                     <div class="message-content">
-                        こんにちは！燈心塾のAIアシスタントです。<br>
-                        料金、授業内容、体験授業など、何でもお気軽にご質問ください！
+                        こんにちは！秋田犬アシスタントの灯（あかり）ちゃんです。<br>
+                        料金や授業内容、体験授業の流れなど、お気軽に声をかけてくださいね！
                     </div>
                 </div>
             </div>
             <div class="chat-input-widget">
-                <input type="text" id="chat-input" class="chat-input-field" placeholder="メッセージを入力..." autocomplete="off">
+                <input type="text" id="chat-input" class="chat-input-field" placeholder="灯ちゃんにメッセージを送る..." autocomplete="off">
                 <button id="chat-send-btn" class="chat-send-btn">
                     <i class="bi bi-send-fill"></i>
                 </button>
@@ -552,72 +558,114 @@
         }
 
         .chat-toggle-btn {
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            border: none;
+            width: 76px;
+            height: 76px;
+            border-radius: 24px;
+            background: linear-gradient(135deg, #ff9a3d 0%, #ffc371 40%, #7bd3ff 100%);
+            border: 3px solid rgba(255, 255, 255, 0.7);
             color: white;
-            font-size: 28px;
-            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+            box-shadow: 0 12px 24px rgba(255, 138, 61, 0.35);
             cursor: pointer;
-            transition: all 0.3s;
+            transition: all 0.3s ease;
             display: flex;
             align-items: center;
             justify-content: center;
         }
 
+        .chat-toggle-btn img {
+            width: 48px;
+            height: 48px;
+        }
+
         .chat-toggle-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+            transform: translateY(-4px) scale(1.04);
+            box-shadow: 0 16px 32px rgba(125, 196, 255, 0.4);
         }
 
         .chat-window {
             position: fixed;
-            bottom: 90px;
-            right: 20px;
-            width: 380px;
-            height: 550px;
-            background: white;
-            border-radius: 15px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            bottom: 110px;
+            right: 30px;
+            width: 400px;
+            height: 580px;
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.98) 0%, #ffffff 55%, rgba(255, 248, 239, 0.98) 100%);
+            border-radius: 24px;
+            border: 3px solid rgba(255, 166, 89, 0.35);
+            box-shadow: 0 22px 60px rgba(62, 118, 180, 0.25);
             display: flex;
             flex-direction: column;
             overflow: hidden;
         }
 
         .chat-header-widget {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #ff9a3d 0%, #ffb86c 45%, #7bd3ff 100%);
             color: white;
-            padding: 15px 20px;
+            padding: 18px 22px;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            gap: 12px;
+        }
+
+        .chat-branding {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .chat-branding__icon {
+            width: 44px;
+            height: 44px;
+            border-radius: 14px;
+            background: rgba(255, 255, 255, 0.25);
+            padding: 6px;
+        }
+
+        .chat-branding__text {
+            display: flex;
+            flex-direction: column;
+            line-height: 1.3;
+        }
+
+        .chat-branding__text strong {
+            font-size: 1rem;
+            letter-spacing: 0.05em;
+        }
+
+        .chat-branding__text span {
+            font-size: 0.75rem;
+            opacity: 0.85;
         }
 
         .chat-close-btn {
-            background: none;
+            background: rgba(255, 255, 255, 0.25);
             border: none;
             color: white;
             font-size: 18px;
             cursor: pointer;
             padding: 5px;
-            transition: transform 0.2s;
+            border-radius: 50%;
+            width: 36px;
+            height: 36px;
+            display: grid;
+            place-items: center;
+            transition: transform 0.2s ease, background 0.3s ease;
         }
 
         .chat-close-btn:hover {
-            transform: scale(1.2);
+            transform: scale(1.12);
+            background: rgba(255, 255, 255, 0.4);
         }
 
         .chat-messages {
             flex: 1;
             overflow-y: auto;
-            padding: 20px;
-            background: #f8f9fa;
+            padding: 24px;
+            background: linear-gradient(180deg, rgba(235, 247, 255, 0.6) 0%, rgba(255, 243, 229, 0.65) 100%);
         }
 
         .bot-message, .user-message {
-            margin-bottom: 15px;
+            margin-bottom: 16px;
             animation: fadeIn 0.3s ease-in;
         }
 
@@ -628,16 +676,28 @@
 
         .message-content {
             display: inline-block;
-            padding: 10px 15px;
-            border-radius: 15px;
-            max-width: 80%;
+            padding: 12px 18px;
+            border-radius: 18px;
+            max-width: 82%;
             word-wrap: break-word;
+            position: relative;
         }
 
         .bot-message .message-content {
-            background: white;
-            color: #333;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            background: linear-gradient(135deg, #fff2e6 0%, #ffe0c2 100%);
+            color: #7a4d23;
+            box-shadow: 0 6px 18px rgba(255, 149, 72, 0.25);
+        }
+
+        .bot-message .message-content::after {
+            content: "";
+            position: absolute;
+            bottom: -6px;
+            left: 16px;
+            width: 12px;
+            height: 12px;
+            background: inherit;
+            transform: rotate(45deg);
         }
 
         .user-message {
@@ -645,61 +705,76 @@
         }
 
         .user-message .message-content {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
+            background: linear-gradient(135deg, #88d5ff 0%, #5cb9ff 100%);
+            color: #064c71;
+            box-shadow: 0 8px 20px rgba(122, 210, 255, 0.25);
+        }
+
+        .user-message .message-content::after {
+            content: "";
+            position: absolute;
+            bottom: -6px;
+            right: 16px;
+            width: 12px;
+            height: 12px;
+            background: inherit;
+            transform: rotate(45deg);
         }
 
         .chat-input-widget {
-            padding: 15px;
-            background: white;
-            border-top: 1px solid #e9ecef;
+            padding: 18px 20px;
+            background: rgba(255, 255, 255, 0.95);
+            border-top: 1px solid rgba(255, 165, 89, 0.25);
             display: flex;
-            gap: 10px;
+            gap: 12px;
         }
 
         .chat-input-field {
             flex: 1;
-            border: 2px solid #e9ecef;
-            border-radius: 20px;
-            padding: 10px 15px;
+            border: 2px solid rgba(123, 211, 255, 0.5);
+            border-radius: 24px;
+            padding: 12px 16px;
             outline: none;
-            transition: border-color 0.3s;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
         }
 
         .chat-input-field:focus {
-            border-color: #667eea;
+            border-color: rgba(255, 154, 61, 0.8);
+            box-shadow: 0 0 0 4px rgba(255, 200, 160, 0.35);
         }
 
         .chat-send-btn {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            width: 46px;
+            height: 46px;
+            border-radius: 16px;
+            background: linear-gradient(135deg, #ff9a3d 0%, #ffb86c 60%, #5cc8ff 100%);
             border: none;
             color: white;
             cursor: pointer;
-            transition: all 0.3s;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
             display: flex;
             align-items: center;
             justify-content: center;
+            box-shadow: 0 12px 20px rgba(255, 154, 61, 0.35);
         }
 
         .chat-send-btn:hover {
-            transform: scale(1.1);
+            transform: scale(1.08) translateY(-2px);
+            box-shadow: 0 16px 26px rgba(122, 210, 255, 0.4);
         }
 
         .typing-indicator {
-            padding: 10px 15px;
-            background: white;
-            border-radius: 15px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            padding: 12px 16px;
+            background: linear-gradient(135deg, rgba(255, 242, 230, 0.9) 0%, rgba(255, 224, 194, 0.9) 100%);
+            border-radius: 18px;
+            box-shadow: 0 6px 16px rgba(255, 154, 61, 0.2);
             display: inline-block;
         }
 
         .typing-indicator span {
             height: 8px;
             width: 8px;
-            background: #667eea;
+            background: #ff9a3d;
             border-radius: 50%;
             display: inline-block;
             margin: 0 2px;
@@ -716,17 +791,22 @@
 
         @media (max-width: 768px) {
             .chat-window {
-                width: calc(100% - 40px);
-                height: 500px;
-                right: 20px;
-                left: 20px;
-                bottom: 90px;
+                width: calc(100% - 48px);
+                height: 520px;
+                right: 24px;
+                left: 24px;
+                bottom: 110px;
             }
 
             .chat-toggle-btn {
-                width: 50px;
-                height: 50px;
-                font-size: 24px;
+                width: 64px;
+                height: 64px;
+                border-radius: 20px;
+            }
+
+            .chat-toggle-btn img {
+                width: 40px;
+                height: 40px;
             }
         }
     </style>
