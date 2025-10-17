@@ -269,6 +269,84 @@ section {
     margin-bottom: 15px;
 }
 
+/* 2. Why Us & Features */
+.section-soft {
+    background: linear-gradient(180deg, #f4f9ff 0%, #ffffff 100%);
+}
+
+.section-cream {
+    background: linear-gradient(180deg, #fff8eb 0%, #ffffff 100%);
+}
+
+.section-intro p {
+    color: var(--muted);
+    max-width: 640px;
+    margin: 0 auto;
+}
+
+.reason-card,
+.strength-card {
+    background: var(--white);
+    border: 1px solid #e2ebff;
+    border-radius: 24px;
+    padding: 2.5rem 2rem;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.reason-card p,
+.strength-card p {
+    color: var(--muted);
+}
+
+.reason-card:hover,
+.strength-card:hover {
+    box-shadow: var(--soft-shadow);
+    border-color: rgba(56, 182, 255, 0.45);
+}
+
+.icon-circle {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    font-size: 1.9rem;
+    margin: 0 auto 1.5rem;
+    color: var(--primary-color);
+    background: #e7f2ff;
+}
+
+.icon-circle.soft-1 {
+    background: #e7f2ff;
+    color: #1f6df5;
+}
+
+.icon-circle.soft-2 {
+    background: #ffe8f3;
+    color: #ff5e8a;
+}
+
+.icon-circle.soft-3 {
+    background: #e8f7f2;
+    color: #2f9e76;
+}
+
+.icon-circle.soft-4 {
+    background: #f1edff;
+    color: #6c4ff8;
+}
+
+.icon-circle.soft-5 {
+    background: #fff1e3;
+    color: #f7941d;
+}
+
+.icon-circle.soft-6 {
+    background: #eaf5ff;
+    color: #2f89ff;
+}
+
 /* 3. Services */
 .service-card {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -288,16 +366,25 @@ section {
     margin-bottom: 1rem;
 }
 
-.service-icon-wrapper.color-1 { background-color: #4A90E2; } /* Blue */
-.service-icon-wrapper.color-2 { background-color: #F5A623; } /* Orange */
-.service-icon-wrapper.color-3 { background-color: #50E3C2; } /* Teal */
-.service-icon-wrapper.color-4 { background-color: #BD10E0; } /* Purple */
-.service-icon-wrapper.color-5 { background-color: #7ED321; } /* Green */
+.service-icon-wrapper.color-1 { background-color: #C1001A; } /* English - Deep Crimson */
+.service-icon-wrapper.color-2 { background-color: #FFC21A; } /* Math - Radiant Yellow */
+.service-icon-wrapper.color-3 { background-color: #9C63FF; } /* Japanese - Purple */
+.service-icon-wrapper.color-4 { background-color: #38C98B; } /* Science - Green */
+.service-icon-wrapper.color-5 { background-color: #4CC7FF; } /* Social Studies - Light Blue */
 
-.service-icon-wrapper.support-color-1 { background-color: #2ECC71; } /* Green */
-.service-icon-wrapper.support-color-2 { background-color: #F1C40F; } /* Yellow */
-.service-icon-wrapper.support-color-3 { background-color: #E74C3C; } /* Red */
-.service-icon-wrapper.support-color-4 { background-color: #3498DB; } /* Blue */
+.service-card--featured .service-icon-wrapper {
+    width: 110px;
+    height: 110px;
+}
+
+.service-card--featured .service-icon-wrapper i {
+    font-size: 2.75rem;
+}
+
+.service-icon-wrapper.support-color-1 { background: linear-gradient(135deg, #ff6b6b, #f7d794, #1dd1a1, #48dbfb, #5f27cd); } /* AI - Rainbow */
+.service-icon-wrapper.support-color-2 { background-color: #A1674A; } /* Essay - Brown */
+.service-icon-wrapper.support-color-3 { background-color: #0B3D91; } /* Recommendation - Indigo */
+.service-icon-wrapper.support-color-4 { background-color: #FF7AB8; } /* Nursing - Pink */
 
 
 .special-support {
