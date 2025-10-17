@@ -540,8 +540,15 @@ section {
 }
 
 .plan-benefits i {
-    color: #1fbf75;
     font-size: 1.2rem;
+}
+
+.plan-benefits li:nth-child(odd) i {
+    color: var(--accent-color);
+}
+
+.plan-benefits li:nth-child(even) i {
+    color: var(--primary-color);
 }
 
 .pricing-cta {
@@ -578,12 +585,38 @@ section {
 
 .campaign-pill {
     display: inline-block;
-    background: rgba(31, 191, 117, 0.12);
-    color: #0f8c54;
+    background: rgba(56, 182, 255, 0.16);
+    color: var(--primary-color);
     font-weight: 700;
     border-radius: 999px;
     padding: 0.55rem 1.4rem;
     letter-spacing: 0.04em;
+}
+
+.subject-pricing {
+    background: #f2f9ff;
+    border-radius: 16px;
+    padding: 1rem 1.25rem;
+    width: 100%;
+}
+
+.subject-pricing__title {
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.subject-pricing ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: 0.4rem;
+}
+
+.subject-pricing li {
+    font-weight: 600;
+    color: #1f3c55;
 }
 
 .payment-note {
