@@ -154,6 +154,7 @@ section {
 
 .brand-name {
     font-weight: 700;
+    color: var(--accent-color);
 }
 
 .site-nav ul {
@@ -202,8 +203,8 @@ section {
 
 /* 1. Hero Section */
 #hero {
-    background-color: var(--primary-color);
-    color: var(--white);
+    background-color: var(--white);
+    color: var(--primary-color);
     display: flex;
     align-items: center;
     min-height: 90vh;
@@ -218,13 +219,13 @@ section {
 }
 
 #hero h1 {
-    color: var(--white);
+    color: var(--primary-color);
     font-size: clamp(2.5rem, 5vw, 3.5rem);
 }
 
 #hero .lead {
     font-size: 1.2rem;
-    color: rgba(255, 255, 255, 0.9);
+    color: var(--primary-color);
 }
 
 .btn-warning {
