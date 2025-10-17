@@ -73,16 +73,3 @@
   }
 })();
 
-// Typed.js initialization for hero title
-document.addEventListener('DOMContentLoaded', () => {
-    if (document.getElementById('hero-title')) {
-        const typed = new Typed('#hero-title', {
-            strings: ['AI×個別で伸ばす<br>オンライン塾'],
-            typeSpeed: 80,
-            startDelay: 500,
-            loop: false,
-            showCursor: false,
-            contentType: 'html',
-        });
-    }
-});
