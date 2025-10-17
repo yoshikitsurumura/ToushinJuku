@@ -86,6 +86,16 @@
                             </div>
                             <p class="hero-note" data-aos="fade-up" data-aos-delay="320">保護者の方のご相談だけでもお気軽にどうぞ。</p>
                         </div>
+                        <div class="ai-callout" data-aos="fade-up" data-aos-delay="260">
+                            <div class="ai-callout__icon" aria-hidden="true">
+                                <img src="images/akita-dog.svg" alt="秋田犬AIアシスタントのアイコン" width="56" height="56" loading="lazy">
+                            </div>
+                            <div class="ai-callout__content">
+                                <p class="ai-callout__title">AI秋田いぬの灯（あかり）ちゃんに聞いてみたい？</p>
+                                <p class="ai-callout__text">「AIに聞いてみたい！」ボタンから、気になることをその場でチャット相談できます。</p>
+                                <button type="button" class="btn btn-ai" id="ai-chat-cta">AIに聞いてみたい！</button>
+                            </div>
+                        </div>
                     </div>
                     <div class="col-lg-6 d-none d-lg-block" data-aos="fade-left">
                         <img src="https://images.unsplash.com/photo-1523580846011-d3a5bc25702b?auto=format&fit=crop&w=1200&q=80" class="img-fluid hero-visual" alt="ガッツポーズで笑顔を見せる高校生の男女">
@@ -889,6 +899,7 @@
             const chatMessages = document.getElementById('chat-messages');
             const chatInput = document.getElementById('chat-input');
             const chatSendBtn = document.getElementById('chat-send-btn');
+            const aiChatCTA = document.getElementById('ai-chat-cta');
 
             // ユーザーID生成
             let userId = localStorage.getItem('chatUserId');
@@ -897,14 +908,22 @@
                 localStorage.setItem('chatUserId', userId);
             }
 
+            function openChatWindow() {
+                chatWindow.style.display = 'flex';
+                chatToggleBtn.style.display = 'none';
+                chatInput.focus();
+            }
+
             // チャットウィンドウの開閉
             chatToggleBtn.addEventListener('click', function() {
-                if (chatWindow.style.display === 'none') {
-                    chatWindow.style.display = 'flex';
-                    chatToggleBtn.style.display = 'none';
-                    chatInput.focus();
-                }
+                openChatWindow();
             });
+
+            if (aiChatCTA) {
+                aiChatCTA.addEventListener('click', function() {
+                    openChatWindow();
+                });
+            }
 
             chatCloseBtn.addEventListener('click', function() {
                 chatWindow.style.display = 'none';
