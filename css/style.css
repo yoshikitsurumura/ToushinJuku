@@ -1,6 +1,6 @@
 /* 基本設定と変数 */
 :root {
-    --primary-color: #0D47A1; /* Deep Blue */
+    --primary-color: #38B6FF; /* Light Blue */
     --accent-color: #FF7A00;  /* Orange */
     --text-color: #333;
     --bg-color: #FFFFFF;
@@ -237,6 +237,10 @@ section {
     background-color: #e66e00; /* 少し濃いオレンジ */
     border-color: #e66e00;
     color: var(--white);
+}
+
+#hero .btn-lg {
+    font-size: calc(1.25rem - 0.083rem);
 }
 
 
