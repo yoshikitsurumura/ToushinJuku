@@ -1087,29 +1087,46 @@ section {
 }
 
 .plan-benefits__item {
+    --icon-color: #38B6FF;
     display: flex;
-    align-items: flex-start;
-    gap: 0.75rem;
+    align-items: center;
+    gap: 0.95rem;
     font-weight: 500;
     color: var(--text-color);
-    background: linear-gradient(135deg, rgba(56, 182, 255, 0.08), rgba(255, 122, 0, 0.08));
+    background: linear-gradient(135deg, rgba(255, 249, 244, 0.95), rgba(242, 249, 255, 0.95));
     border-radius: 18px;
-    padding: 0.85rem 1.1rem;
-    box-shadow: 0 10px 24px rgba(31, 76, 135, 0.08);
+    padding: 0.95rem 1.2rem;
+    border: 1px solid rgba(255, 156, 70, 0.16);
+    box-shadow: 0 18px 38px rgba(255, 156, 70, 0.12), 0 14px 32px rgba(56, 182, 255, 0.12);
 }
 
-.plan-benefits__item i {
-    font-size: 1.25rem;
+.plan-benefits__item:nth-child(even) {
+    --icon-color: #FF8F1F;
+    border-color: rgba(56, 182, 255, 0.18);
+    box-shadow: 0 18px 38px rgba(56, 182, 255, 0.12), 0 14px 32px rgba(255, 156, 70, 0.12);
+}
+
+.plan-benefits__icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
     flex-shrink: 0;
-    color: var(--primary-color);
+    color: var(--icon-color);
 }
 
-.plan-benefits__item:nth-child(odd) i {
-    color: var(--accent-color);
+.plan-benefits__icon svg {
+    width: 100%;
+    height: 100%;
 }
 
-.plan-benefits__item:nth-child(even) i {
-    color: var(--primary-color);
+.plan-benefits__icon-shape {
+    fill: currentColor;
+}
+
+.plan-benefits__icon-check {
+    fill: #fff;
 }
 
 .pricing-cta {
@@ -1163,8 +1180,8 @@ section {
 }
 
 .subject-pricing {
-    background: #f2f9ff;
-    border: 1px solid rgba(129, 211, 255, 0.25);
+    background: linear-gradient(135deg, rgba(56, 182, 255, 0.12), rgba(255, 156, 70, 0.14));
+    border: 1px solid rgba(255, 156, 70, 0.22);
     border-radius: 16px;
     padding: 1.35rem 1.6rem;
     width: 100%;
@@ -1182,54 +1199,101 @@ section {
     letter-spacing: 0.04em;
 }
 
-.subject-pricing ul {
+
+.subject-pricing__list {
     list-style: none;
     padding: 0;
     margin: 0;
-    display: grid;
-    gap: 0.9rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
 }
 
-.subject-pricing li {
-    display: grid;
-    grid-template-columns: auto auto;
-    column-gap: 0.9rem;
-    row-gap: 0.35rem;
-    align-items: baseline;
-    font-weight: 600;
+.subject-tier {
+    --bubble-start: #38B6FF;
+    --bubble-end: #5CC6FF;
+    --bubble-shadow: rgba(56, 182, 255, 0.28);
+    --label-bg: rgba(56, 182, 255, 0.12);
+    --label-color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    background: rgba(255, 255, 255, 0.85);
+    border: 1px solid rgba(56, 182, 255, 0.18);
+    border-radius: 16px;
+    padding: 0.85rem 1.15rem;
+    box-shadow: 0 12px 28px rgba(31, 76, 135, 0.12);
     color: #1f3c55;
+}
+
+.subject-tier__info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
 }
 
 .subject-label {
     font-weight: 700;
-    color: var(--primary-color);
-    background: rgba(56, 182, 255, 0.12);
+    color: var(--label-color);
+    background: var(--label-bg);
     padding: 0.2rem 0.75rem;
     border-radius: 999px;
     letter-spacing: 0.05em;
 }
 
 .subject-price {
-    justify-self: start;
     font-weight: 700;
     color: #214b6e;
 }
 
-.subject-saving {
-    font-size: 0.85rem;
-    font-weight: 700;
-    color: var(--accent-color);
-    background: rgba(255, 122, 0, 0.12);
-    padding: 0.25rem 0.7rem;
-    border-radius: 999px;
-    white-space: nowrap;
-    grid-column: 1 / -1;
-    align-self: start;
+.subject-tier:nth-child(2) {
+    --bubble-start: #FF8F1F;
+    --bubble-end: #FFB347;
+    --bubble-shadow: rgba(255, 143, 31, 0.28);
+    --label-bg: rgba(255, 143, 31, 0.18);
+    --label-color: #c65a00;
 }
 
-.subject-saving--accent {
-    background: rgba(56, 182, 255, 0.2);
-    color: #1a5ea0;
+.subject-tier:nth-child(3) {
+    --bubble-start: #38B6FF;
+    --bubble-end: #FF8F1F;
+    --bubble-shadow: rgba(255, 143, 31, 0.22);
+    --label-bg: linear-gradient(135deg, rgba(56, 182, 255, 0.12), rgba(255, 143, 31, 0.18));
+    --label-color: #1f3c55;
+}
+
+.subject-saving-bubble {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.4rem 1.1rem;
+    border-radius: 999px;
+    background: linear-gradient(135deg, var(--bubble-start), var(--bubble-end));
+    color: #fff;
+    font-weight: 700;
+    font-size: 0.95rem;
+    letter-spacing: 0.03em;
+    box-shadow: 0 12px 26px var(--bubble-shadow);
+    white-space: nowrap;
+}
+
+.subject-saving-bubble::before {
+    content: "";
+    position: absolute;
+    left: -8px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-right: 8px solid var(--bubble-start);
+}
+
+.subject-price {
+    white-space: nowrap;
 }
 
 .cta-buttons {
@@ -1258,17 +1322,15 @@ section {
         padding: 1.2rem 1.35rem;
     }
 
-    .subject-pricing li {
-        grid-template-columns: 1fr;
+    .subject-tier {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.65rem;
     }
 
-    .subject-label {
-        width: fit-content;
-    }
-
-    .subject-price,
-    .subject-saving {
-        justify-self: start;
+    .subject-saving-bubble {
+        margin-left: 0;
+        align-self: flex-start;
     }
 }
 
