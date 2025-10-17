@@ -1834,43 +1834,51 @@ section {
 .cta-content {
     display: flex;
     flex-wrap: wrap;
-    gap: 2.5rem;
+    gap: 3rem;
     justify-content: center;
     align-items: center;
-    margin-bottom: 2.5rem;
+    margin-bottom: 2.75rem;
 }
 
 .cta-contact {
     flex: 1 1 320px;
-    max-width: 420px;
+    max-width: 460px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    gap: 1.5rem;
+    text-align: left;
+}
+
+.cta-contact .btn-line {
+    width: 100%;
+    padding: 1.1rem 1.5rem;
+    font-size: 1.1rem;
+    text-align: center;
 }
 
 .btn-line {
-    background: linear-gradient(135deg, var(--accent-color), var(--primary-color));
+    background: linear-gradient(120deg, #ff6b00 0%, #ff8a00 40%, #00b7ff 100%);
     border: none;
     color: var(--white);
+    box-shadow: 0 14px 28px rgba(255, 107, 0, 0.28);
 }
 
 .btn-line:hover {
     color: var(--white);
-    opacity: 0.9;
+    filter: brightness(1.05);
 }
 
 .cta-note {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    margin-top: 1rem;
+    margin-top: 0.5rem;
     color: var(--muted);
     font-weight: 600;
-}
-
-.cta-note i {
-    color: var(--primary-color);
+    text-align: left;
+    white-space: nowrap;
 }
 
 .cta-phone {
-    margin-top: 1.75rem;
     padding: 1.5rem;
     background: var(--white);
     border-radius: var(--border-radius);
@@ -1879,6 +1887,8 @@ section {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
+    align-items: flex-start;
+    text-align: left;
 }
 
 .cta-phone-label {
@@ -1903,6 +1913,7 @@ section {
     flex: 1 1 240px;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 .qr-card {
@@ -1910,14 +1921,14 @@ section {
     border-radius: 20px;
     padding: 1.75rem 1.5rem;
     box-shadow: var(--soft-shadow);
-    border: 1px solid rgba(56, 182, 255, 0.18);
+    border: 2px solid rgba(0, 183, 255, 0.28);
     text-align: center;
 }
 
 .qr-card img {
     border-radius: 16px;
-    border: 4px solid #ffffff;
-    box-shadow: var(--shadow);
+    border: 4px solid rgba(255, 255, 255, 0.95);
+    box-shadow: 0 18px 28px rgba(0, 183, 255, 0.18);
 }
 
 .qr-caption {
@@ -2100,14 +2111,19 @@ section {
 
     .cta-contact {
         max-width: 100%;
+        align-items: center;
+        text-align: center;
     }
 
     .cta-note {
         justify-content: center;
+        text-align: center;
+        white-space: normal;
     }
 
     .cta-phone {
         align-items: center;
+        text-align: center;
     }
 
     .cta-phone-number {
