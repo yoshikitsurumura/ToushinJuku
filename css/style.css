@@ -759,8 +759,195 @@ section {
 
 /* 9. CTA */
 #cta {
-    background: linear-gradient(180deg, #f7faff, #ffffff);
+    background: linear-gradient(180deg, #f3f9ff 0%, #ffffff 70%, #fff6ec 100%);
+}
+
+.cta-section {
+    text-align: left;
+}
+
+.cta-head {
+    max-width: 640px;
+    margin: 0 auto 2.5rem auto;
+}
+
+.cta-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    background: rgba(255, 122, 0, 0.18);
+    color: var(--accent-color);
+    border-radius: 999px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    padding: 0.35rem 1.2rem;
+}
+
+.cta-title {
+    margin: 1.2rem 0 0.75rem 0;
+}
+
+.cta-lead {
+    color: var(--muted);
+    font-weight: 500;
+}
+
+.cta-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.5rem;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2.5rem;
+}
+
+.cta-contact {
+    flex: 1 1 320px;
+    max-width: 420px;
+}
+
+.btn-line {
+    background: linear-gradient(135deg, var(--accent-color), var(--primary-color));
+    border: none;
+    color: var(--white);
+}
+
+.btn-line:hover {
+    color: var(--white);
+    opacity: 0.9;
+}
+
+.cta-note {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    color: var(--muted);
+    font-weight: 600;
+}
+
+.cta-note i {
+    color: var(--primary-color);
+}
+
+.cta-phone {
+    margin-top: 1.75rem;
+    padding: 1.5rem;
+    background: var(--white);
+    border-radius: var(--border-radius);
+    border: 1px solid rgba(255, 122, 0, 0.25);
+    box-shadow: var(--shadow);
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.cta-phone-label {
+    font-weight: 600;
+    color: var(--muted);
+}
+
+.cta-phone-number {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: var(--accent-color);
+}
+
+.cta-phone-number:hover {
+    color: var(--accent-color);
+}
+
+.cta-qr {
+    flex: 1 1 240px;
+    display: flex;
+    justify-content: center;
+}
+
+.qr-card {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    padding: 1.75rem 1.5rem;
+    box-shadow: var(--soft-shadow);
+    border: 1px solid rgba(56, 182, 255, 0.18);
     text-align: center;
+}
+
+.qr-card img {
+    border-radius: 16px;
+    border: 4px solid #ffffff;
+    box-shadow: var(--shadow);
+}
+
+.qr-caption {
+    margin-top: 1rem;
+    color: var(--muted);
+    font-weight: 600;
+    line-height: 1.6;
+}
+
+.cta-benefits {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.benefit-card {
+    background: var(--white);
+    border-radius: 20px;
+    padding: 1.6rem 1.4rem;
+    box-shadow: var(--shadow);
+    border: 1px solid rgba(255, 122, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+.benefit-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(255, 122, 0, 0.08), rgba(56, 182, 255, 0.08));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 0;
+}
+
+.benefit-card:hover::before {
+    opacity: 1;
+}
+
+.benefit-card > * {
+    position: relative;
+    z-index: 1;
+}
+
+.benefit-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.3rem 0.9rem;
+    border-radius: 999px;
+    background: rgba(56, 182, 255, 0.15);
+    color: var(--primary-color);
+    font-weight: 700;
+    font-size: 0.9rem;
+    letter-spacing: 0.04em;
+    margin-bottom: 1rem;
+}
+
+.benefit-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: var(--text-color);
+}
+
+.benefit-text {
+    color: var(--muted);
+    font-weight: 500;
+    margin: 0;
 }
 
 /* フッター */
@@ -779,16 +966,6 @@ section {
 }
 .site-footer a:hover {
     color: var(--primary-color);
-}
-
-/* New CTA Section */
-#new-cta .card {
-    color: var(--text-color);
-}
-
-#new-cta .btn-success {
-    background-color: #28a745;
-    border-color: #28a745;
 }
 
 .footer-grid {
@@ -839,13 +1016,42 @@ section {
     h1 { font-size: 2.2rem; }
     #hero h1 { font-size: 2.5rem; }
     h2 { font-size: 1.8rem; }
-    
+
     .container {
         width: 90%;
     }
 
     section {
         padding: 60px 0;
+    }
+
+    .cta-section {
+        text-align: center;
+    }
+
+    .cta-content {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .cta-contact {
+        max-width: 100%;
+    }
+
+    .cta-note {
+        justify-content: center;
+    }
+
+    .cta-phone {
+        align-items: center;
+    }
+
+    .cta-phone-number {
+        justify-content: center;
+    }
+
+    .cta-benefits {
+        grid-template-columns: 1fr;
     }
 
     /* Grid Adjustments */
