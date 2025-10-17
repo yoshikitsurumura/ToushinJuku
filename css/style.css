@@ -1390,8 +1390,15 @@ section {
 }
 
 .teacher-points i {
-    color: var(--accent-color);
     font-size: 1.1rem;
+}
+
+.teacher-points li:nth-child(odd) i {
+    color: var(--primary-color);
+}
+
+.teacher-points li:nth-child(even) i {
+    color: var(--accent-color);
 }
 
 .teacher-points--rich {
