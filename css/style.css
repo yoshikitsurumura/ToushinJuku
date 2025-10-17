@@ -833,14 +833,47 @@ section {
 
 /* 3. Services */
 .service-card {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    background: linear-gradient(165deg, rgba(255, 255, 255, 0.92) 10%, rgba(56, 182, 255, 0.08) 100%);
+    border: 1px solid rgba(56, 182, 255, 0.12);
+    box-shadow: 0 18px 40px rgba(13, 71, 161, 0.08);
+    border-radius: 24px;
+    overflow: hidden;
 }
+
+.service-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background: radial-gradient(circle at 20% -10%, rgba(255, 255, 255, 0.45), transparent 55%);
+    opacity: 0.8;
+    pointer-events: none;
+}
+
+.service-card::after {
+    content: "";
+    position: absolute;
+    inset: 12px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    mix-blend-mode: soft-light;
+    pointer-events: none;
+}
+
+.service-card .card-body {
+    position: relative;
+    z-index: 1;
+}
+
 .service-card:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--soft-shadow) !important;
+    transform: translateY(-10px);
+    box-shadow: 0 26px 50px rgba(13, 71, 161, 0.16);
 }
 
 .service-icon-wrapper {
+    position: relative;
     width: 80px;
     height: 80px;
     border-radius: 50%;
@@ -848,13 +881,61 @@ section {
     place-items: center;
     color: var(--white);
     margin-bottom: 1rem;
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.45);
+    transition: transform 0.45s ease, box-shadow 0.45s ease;
 }
 
-.service-icon-wrapper.color-1 { background-color: #C1001A; } /* English - Deep Crimson */
-.service-icon-wrapper.color-2 { background-color: #FFC21A; } /* Math - Radiant Yellow */
-.service-icon-wrapper.color-3 { background-color: #9C63FF; } /* Japanese - Purple */
-.service-icon-wrapper.color-4 { background-color: #38C98B; } /* Science - Green */
-.service-icon-wrapper.color-5 { background-color: #4CC7FF; } /* Social Studies - Light Blue */
+.service-icon-wrapper::before {
+    content: "";
+    position: absolute;
+    inset: -8px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.45), rgba(56, 182, 255, 0.12));
+    filter: blur(0.5px);
+    z-index: -1;
+    opacity: 0.9;
+}
+
+.service-icon-wrapper::after {
+    content: "";
+    position: absolute;
+    inset: 4px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 30% 20%, rgba(255, 255, 255, 0.65), transparent 65%);
+    mix-blend-mode: screen;
+    pointer-events: none;
+}
+
+.service-card:hover .service-icon-wrapper {
+    transform: translateY(-4px) scale(1.02);
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.55), 0 18px 30px rgba(13, 71, 161, 0.24);
+}
+
+.service-icon-wrapper.color-1 {
+    background: linear-gradient(135deg, #ff4d5a 0%, #c1001a 85%);
+    box-shadow: 0 20px 32px rgba(193, 0, 26, 0.35);
+}
+
+.service-icon-wrapper.color-2 {
+    background: linear-gradient(135deg, #ffe680 0%, #ffc21a 85%);
+    color: #5f4100;
+    box-shadow: 0 20px 32px rgba(255, 194, 26, 0.3);
+}
+
+.service-icon-wrapper.color-3 {
+    background: linear-gradient(135deg, #d0a6ff 0%, #9c63ff 85%);
+    box-shadow: 0 20px 32px rgba(156, 99, 255, 0.32);
+}
+
+.service-icon-wrapper.color-4 {
+    background: linear-gradient(135deg, #6be5b4 0%, #38c98b 85%);
+    box-shadow: 0 20px 32px rgba(56, 201, 139, 0.28);
+}
+
+.service-icon-wrapper.color-5 {
+    background: linear-gradient(135deg, #9de7ff 0%, #4cc7ff 85%);
+    box-shadow: 0 20px 32px rgba(76, 199, 255, 0.28);
+}
 
 .service-card--featured .service-icon-wrapper {
     width: 110px;
@@ -876,9 +957,20 @@ section {
         #af52de 308.58deg 360deg
     );
 } /* AI - Rainbow */
-.service-icon-wrapper.support-color-2 { background-color: #A1674A; } /* Essay - Brown */
-.service-icon-wrapper.support-color-3 { background-color: #0B3D91; } /* Recommendation - Indigo */
-.service-icon-wrapper.support-color-4 { background-color: #FF7AB8; } /* Nursing - Pink */
+.service-icon-wrapper.support-color-2 {
+    background: linear-gradient(140deg, #c78862 0%, #a1674a 85%);
+    box-shadow: 0 20px 32px rgba(161, 103, 74, 0.3);
+} /* Essay - Brown */
+
+.service-icon-wrapper.support-color-3 {
+    background: linear-gradient(140deg, #1d5be0 0%, #0b3d91 85%);
+    box-shadow: 0 20px 32px rgba(11, 61, 145, 0.32);
+} /* Recommendation - Indigo */
+
+.service-icon-wrapper.support-color-4 {
+    background: linear-gradient(140deg, #ff9fd0 0%, #ff7ab8 85%);
+    box-shadow: 0 20px 32px rgba(255, 122, 184, 0.32);
+} /* Nursing - Pink */
 
 
 .special-support {
