@@ -164,6 +164,7 @@ section {
 
 .brand-name {
     font-weight: 700;
+    color: var(--accent-color);
 }
 
 .site-nav ul {
@@ -213,7 +214,7 @@ section {
 /* 1. Hero Section */
 #hero {
     background-color: var(--white);
-    color: var(--text-color);
+    color: var(--primary-color);
     display: flex;
     align-items: center;
     min-height: 90vh;
@@ -228,26 +229,13 @@ section {
 }
 
 #hero h1 {
-    color: var(--text-color);
+    color: var(--primary-color);
     font-size: clamp(2.5rem, 5vw, 3.5rem);
 }
 
 #hero .lead {
     font-size: 1.2rem;
-    color: var(--text-color);
-}
-
-.hero-lead {
-    font-weight: 600;
-    line-height: 1.7;
-}
-
-.hero-lead-line {
-    display: block;
-}
-
-.hero-lead-line + .hero-lead-line {
-    margin-top: 0.35rem;
+    color: var(--primary-color);
 }
 
 .btn-warning {
