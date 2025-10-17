@@ -566,6 +566,18 @@ section {
     letter-spacing: 0.08em;
 }
 
+#features .section-intro h2 {
+    color: var(--primary-color);
+}
+
+#services h2 {
+    color: var(--accent-color);
+}
+
+#schedule h2 {
+    color: var(--primary-color);
+}
+
 #why-us .section-intro p {
     color: #4f6f8e;
 }
@@ -881,60 +893,62 @@ section {
     place-items: center;
     color: var(--white);
     margin-bottom: 1rem;
-    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.45);
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.3), 0 10px 22px rgba(13, 71, 161, 0.12);
     transition: transform 0.45s ease, box-shadow 0.45s ease;
 }
 
 .service-icon-wrapper::before {
     content: "";
     position: absolute;
-    inset: -8px;
+    inset: -4px;
     border-radius: 50%;
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.45), rgba(56, 182, 255, 0.12));
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.28), rgba(56, 182, 255, 0.08));
     filter: blur(0.5px);
     z-index: -1;
-    opacity: 0.9;
+    opacity: 0.6;
 }
 
 .service-icon-wrapper::after {
     content: "";
     position: absolute;
-    inset: 4px;
+    inset: 6px;
     border-radius: 50%;
-    background: radial-gradient(circle at 30% 20%, rgba(255, 255, 255, 0.65), transparent 65%);
+    background: radial-gradient(circle at 35% 25%, rgba(255, 255, 255, 0.4), transparent 70%);
     mix-blend-mode: screen;
     pointer-events: none;
+    opacity: 0.6;
 }
 
 .service-card:hover .service-icon-wrapper {
     transform: translateY(-4px) scale(1.02);
-    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.55), 0 18px 30px rgba(13, 71, 161, 0.24);
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.45), 0 16px 26px rgba(13, 71, 161, 0.18);
 }
 
+
 .service-icon-wrapper.color-1 {
-    background: linear-gradient(135deg, #ff4d5a 0%, #c1001a 85%);
-    box-shadow: 0 20px 32px rgba(193, 0, 26, 0.35);
+    background: linear-gradient(135deg, #ff7ab7 0%, #ff3c5f 55%, #ff1d3f 100%);
+    box-shadow: 0 14px 26px rgba(255, 75, 133, 0.24);
 }
 
 .service-icon-wrapper.color-2 {
-    background: linear-gradient(135deg, #ffe680 0%, #ffc21a 85%);
+    background: linear-gradient(135deg, #fff6b5 0%, #ffd872 45%, #ffc461 72%, #ffb347 100%);
     color: #5f4100;
-    box-shadow: 0 20px 32px rgba(255, 194, 26, 0.3);
+    box-shadow: 0 14px 26px rgba(255, 210, 77, 0.24);
 }
 
 .service-icon-wrapper.color-3 {
     background: linear-gradient(135deg, #d0a6ff 0%, #9c63ff 85%);
-    box-shadow: 0 20px 32px rgba(156, 99, 255, 0.32);
+    box-shadow: 0 14px 26px rgba(156, 99, 255, 0.24);
 }
 
 .service-icon-wrapper.color-4 {
     background: linear-gradient(135deg, #6be5b4 0%, #38c98b 85%);
-    box-shadow: 0 20px 32px rgba(56, 201, 139, 0.28);
+    box-shadow: 0 14px 26px rgba(56, 201, 139, 0.22);
 }
 
 .service-icon-wrapper.color-5 {
     background: linear-gradient(135deg, #9de7ff 0%, #4cc7ff 85%);
-    box-shadow: 0 20px 32px rgba(76, 199, 255, 0.28);
+    box-shadow: 0 14px 26px rgba(76, 199, 255, 0.22);
 }
 
 .service-card--featured .service-icon-wrapper {
@@ -948,28 +962,30 @@ section {
 
 .service-icon-wrapper.support-color-1 {
     background: conic-gradient(
-        #ff3b30 0deg 51.43deg,
-        #ff9500 51.43deg 102.86deg,
-        #ffcc00 102.86deg 154.29deg,
-        #34c759 154.29deg 205.72deg,
-        #007aff 205.72deg 257.15deg,
-        #5856d6 257.15deg 308.58deg,
-        #af52de 308.58deg 360deg
+        from -90deg,
+        #ff3b30 0deg,
+        #ff7b19 51deg,
+        #ffcc00 102deg,
+        #34c759 153deg,
+        #0a84ff 204deg,
+        #3d4cbf 255deg,
+        #af52de 306deg
     );
+    box-shadow: 0 14px 26px rgba(88, 86, 214, 0.22);
 } /* AI - Rainbow */
 .service-icon-wrapper.support-color-2 {
     background: linear-gradient(140deg, #c78862 0%, #a1674a 85%);
-    box-shadow: 0 20px 32px rgba(161, 103, 74, 0.3);
+    box-shadow: 0 14px 26px rgba(161, 103, 74, 0.24);
 } /* Essay - Brown */
 
 .service-icon-wrapper.support-color-3 {
     background: linear-gradient(140deg, #1d5be0 0%, #0b3d91 85%);
-    box-shadow: 0 20px 32px rgba(11, 61, 145, 0.32);
+    box-shadow: 0 14px 26px rgba(11, 61, 145, 0.24);
 } /* Recommendation - Indigo */
 
 .service-icon-wrapper.support-color-4 {
     background: linear-gradient(140deg, #ff9fd0 0%, #ff7ab8 85%);
-    box-shadow: 0 20px 32px rgba(255, 122, 184, 0.32);
+    box-shadow: 0 14px 26px rgba(255, 122, 184, 0.24);
 } /* Nursing - Pink */
 
 
