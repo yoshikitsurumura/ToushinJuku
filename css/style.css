@@ -296,7 +296,7 @@ section {
 }
 
 .hero-subtitle {
-    font-size: 1.1rem;
+    font-size: 1.25rem;
     color: var(--text-color);
     line-height: 1.7;
 }
@@ -316,18 +316,13 @@ section {
     align-items: center;
     gap: 0.6rem;
     font-weight: 800;
-    font-size: clamp(1.15rem, 2.4vw, 1.45rem);
-    color: var(--accent-color);
+    font-size: clamp(1.4rem, 2.8vw, 1.7rem);
+    color: #dc3545;
     margin-bottom: 1.1rem;
 }
 
 .hero-details__banner::before {
-    content: "";
-    width: 14px;
-    height: 14px;
-    border-radius: 4px;
-    background: linear-gradient(135deg, #ffb347 0%, #ff7a00 100%);
-    box-shadow: 0 8px 18px rgba(255, 136, 0, 0.25);
+    content: none;
 }
 
 .hero-details__list {
@@ -1305,15 +1300,10 @@ section {
 }
 
 .subject-pricing {
-    background: linear-gradient(135deg, rgba(56, 182, 255, 0.12), rgba(255, 156, 70, 0.14));
-    border: 1px solid rgba(255, 156, 70, 0.22);
-    border-radius: 16px;
-    padding: 1.35rem 1.6rem;
     width: 100%;
     display: flex;
     flex-direction: column;
     gap: 0.85rem;
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.7);
     text-align: left;
 }
 
@@ -1343,19 +1333,16 @@ section {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 1rem;
-    background: rgba(255, 255, 255, 0.85);
-    border: 1px solid rgba(56, 182, 255, 0.18);
-    border-radius: 16px;
-    padding: 0.85rem 1.15rem;
-    box-shadow: 0 12px 28px rgba(31, 76, 135, 0.12);
+    gap: 0.5rem;
     color: #1f3c55;
 }
 
 .subject-tier__info {
     display: flex;
-    flex-direction: column;
-    gap: 0.2rem;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+    flex-shrink: 0;
 }
 
 .subject-label {
@@ -1380,12 +1367,22 @@ section {
     --label-color: #c65a00;
 }
 
+.subject-tier:nth-child(2) .subject-price {
+    color: #dc3545;
+    font-size: 1.15rem;
+}
+
 .subject-tier:nth-child(3) {
     --bubble-start: #38B6FF;
     --bubble-end: #FF8F1F;
     --bubble-shadow: rgba(255, 143, 31, 0.22);
     --label-bg: linear-gradient(135deg, rgba(56, 182, 255, 0.12), rgba(255, 143, 31, 0.18));
     --label-color: #1f3c55;
+}
+
+.subject-tier:nth-child(3) .subject-price {
+    color: #dc3545;
+    font-size: 1.15rem;
 }
 
 .subject-saving-bubble {
@@ -1443,14 +1440,16 @@ section {
         padding: 1.5rem;
     }
 
-    .subject-pricing {
-        padding: 1.2rem 1.35rem;
-    }
-
     .subject-tier {
         flex-direction: column;
         align-items: flex-start;
-        gap: 0.65rem;
+        gap: 0.4rem;
+    }
+
+    .subject-tier__info {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.3rem;
     }
 
     .subject-saving-bubble {
@@ -2221,7 +2220,7 @@ section {
 }
 
 .site-footer h3 {
-    color: var(--primary-color);
+    color: var(--accent-color);
     font-size: 1.2rem;
 }
 
