@@ -379,10 +379,11 @@ section {
 
 .hero-actions {
     align-items: stretch;
+    flex-wrap: wrap;
 }
 
 .hero-actions .btn {
-    flex: 1 1 auto;
+    flex: 1 1 210px;
 }
 
 .hero-note {
@@ -2146,6 +2147,44 @@ section {
     text-align: left;
 }
 
+.cta-flyer {
+    flex: 1 1 300px;
+    max-width: 400px;
+    background: #ffffff;
+    border-radius: 24px;
+    padding: 2.4rem 2.2rem;
+    box-shadow: 0 24px 48px rgba(56, 182, 255, 0.15);
+    text-align: left;
+}
+
+.cta-flyer-title {
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    color: #0c2850;
+}
+
+.cta-flyer-text {
+    color: var(--muted);
+    line-height: 1.6;
+    margin-bottom: 1.25rem;
+}
+
+.cta-flyer-buttons {
+    display: grid;
+    gap: 0.75rem;
+}
+
+.cta-flyer-buttons .btn {
+    font-weight: 600;
+    border-radius: 999px;
+    padding: 0.85rem 1.5rem;
+}
+
+.cta-flyer-buttons .btn.btn-outline-primary {
+    border-width: 2px;
+}
+
 .cta-contact .btn-line {
     width: 100%;
     padding: 1.1rem 1.5rem;
@@ -2313,6 +2352,37 @@ section {
     color: var(--primary-color);
 }
 
+.footer-social {
+    margin-top: 1.5rem;
+}
+
+.footer-social-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1.4rem;
+    border-radius: 999px;
+    background: rgba(56, 182, 255, 0.12);
+    color: #0c2850;
+    font-weight: 600;
+    text-decoration: none;
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.footer-social-link i {
+    font-size: 1.1rem;
+}
+
+.footer-social-link span {
+    line-height: 1;
+}
+
+.footer-social-link:hover {
+    transform: translateY(-2px);
+    background: rgba(56, 182, 255, 0.2);
+    color: #0c2850;
+}
+
 .footer-grid {
     display: grid;
     grid-template-columns: 2fr 1fr 1.5fr;
@@ -2365,6 +2435,20 @@ section {
     .ai-callout__content {
         text-align: center;
     }
+
+    .cta-content {
+        gap: 2rem;
+    }
+
+    .cta-flyer {
+        max-width: 100%;
+        text-align: center;
+        padding: 2rem 1.75rem;
+    }
+
+    .cta-flyer-buttons {
+        grid-template-columns: 1fr;
+    }
 }
 
 @media (max-width: 768px) {
@@ -2408,6 +2492,16 @@ section {
         max-width: 100%;
         align-items: center;
         text-align: center;
+    }
+
+    .cta-flyer {
+        max-width: 100%;
+        text-align: center;
+        padding: 2rem 1.5rem;
+    }
+
+    .cta-flyer-buttons .btn {
+        width: 100%;
     }
 
     .cta-note {
