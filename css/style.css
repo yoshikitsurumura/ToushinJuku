@@ -391,6 +391,36 @@ section {
     color: rgba(12, 40, 80, 0.7);
 }
 
+/* Hero Instagram Link */
+.hero-social {
+    text-align: center;
+}
+
+.hero-instagram-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.9rem 2rem;
+    background: linear-gradient(135deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    color: white;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1.05rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 20px rgba(225, 48, 108, 0.3);
+}
+
+.hero-instagram-link i {
+    font-size: 1.4rem;
+}
+
+.hero-instagram-link:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 28px rgba(225, 48, 108, 0.4);
+    color: white;
+}
+
 .hero-visual {
     display: block;
     width: 100%;
@@ -2007,6 +2037,122 @@ section {
     color: var(--muted);
 }
 
+/* 8. Flyer Section */
+#flyers {
+    background: linear-gradient(180deg, #fff6ec 0%, #ffffff 50%);
+}
+
+.flyer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.flyer-card {
+    background: white;
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0 20px 50px rgba(56, 182, 255, 0.12);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: none;
+}
+
+.flyer-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 28px 60px rgba(56, 182, 255, 0.18);
+}
+
+.flyer-card-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--accent-color);
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.flyer-preview {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    border-radius: 12px;
+    overflow: hidden;
+    border: none;
+    background: #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    padding: 0;
+    margin: 0;
+}
+
+.flyer-pdf {
+    width: 100%;
+    height: 100%;
+    border: none !important;
+    outline: none !important;
+    display: block;
+    background: #ffffff;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-shadow: none !important;
+    border-radius: 12px;
+}
+
+/* PDFビューアーのツールバーや枠を非表示にする */
+.flyer-pdf object,
+.flyer-pdf embed {
+    border: none !important;
+    outline: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.flyer-pdf::-webkit-scrollbar {
+    width: 8px;
+}
+
+.flyer-pdf::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.flyer-pdf::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+}
+
+.flyer-pdf::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+.flyer-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, transparent 100%);
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.flyer-preview:hover .flyer-overlay {
+    opacity: 1;
+}
+
+.flyer-overlay .btn {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 768px) {
+    .flyer-preview {
+        height: 500px;
+    }
+    
+    .flyer-card {
+        padding: 1.5rem;
+    }
+}
+
 /* 9. CTA */
 #cta {
     background: linear-gradient(180deg, #f3f9ff 0%, #ffffff 70%, #fff6ec 100%);
@@ -2147,42 +2293,73 @@ section {
     text-align: left;
 }
 
-.cta-flyer {
+/* CTA Instagram Section */
+.cta-instagram {
     flex: 1 1 300px;
     max-width: 400px;
-    background: #ffffff;
+    background: linear-gradient(135deg, rgba(240, 148, 51, 0.1) 0%, rgba(188, 24, 136, 0.1) 100%);
+    border: 2px solid rgba(225, 48, 108, 0.2);
     border-radius: 24px;
     padding: 2.4rem 2.2rem;
-    box-shadow: 0 24px 48px rgba(56, 182, 255, 0.15);
-    text-align: left;
+    box-shadow: 0 24px 48px rgba(225, 48, 108, 0.15);
+    text-align: center;
 }
 
-.cta-flyer-title {
+.cta-instagram-title {
     font-size: 1.6rem;
     font-weight: 700;
     margin-bottom: 0.75rem;
     color: #0c2850;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
 }
 
-.cta-flyer-text {
+.cta-instagram-title::before {
+    content: '';
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    background: linear-gradient(135deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    border-radius: 8px;
+    mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z'/%3E%3C/svg%3E");
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    mask-position: center;
+}
+
+.cta-instagram-text {
     color: var(--muted);
     line-height: 1.6;
-    margin-bottom: 1.25rem;
+    margin-bottom: 1.5rem;
 }
 
-.cta-flyer-buttons {
-    display: grid;
-    gap: 0.75rem;
-}
-
-.cta-flyer-buttons .btn {
+.btn-instagram {
+    width: 100%;
+    background: linear-gradient(135deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    border: none;
+    color: white;
     font-weight: 600;
-    border-radius: 999px;
-    padding: 0.85rem 1.5rem;
+    border-radius: 50px;
+    padding: 1rem 2rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 20px rgba(225, 48, 108, 0.3);
+    text-decoration: none;
 }
 
-.cta-flyer-buttons .btn.btn-outline-primary {
-    border-width: 2px;
+.btn-instagram i {
+    font-size: 1.3rem;
+}
+
+.btn-instagram:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 28px rgba(225, 48, 108, 0.4);
+    color: white;
 }
 
 .cta-contact .btn-line {
@@ -2440,14 +2617,10 @@ section {
         gap: 2rem;
     }
 
-    .cta-flyer {
+    .cta-instagram {
         max-width: 100%;
         text-align: center;
         padding: 2rem 1.75rem;
-    }
-
-    .cta-flyer-buttons {
-        grid-template-columns: 1fr;
     }
 }
 
@@ -2494,13 +2667,13 @@ section {
         text-align: center;
     }
 
-    .cta-flyer {
+    .cta-instagram {
         max-width: 100%;
         text-align: center;
         padding: 2rem 1.5rem;
     }
 
-    .cta-flyer-buttons .btn {
+    .btn-instagram {
         width: 100%;
     }
 
