@@ -22,7 +22,6 @@
         <meta name="apple-mobile-web-app-title" content="燈心塾">
         <meta name="format-detection" content="telephone=yes">
         <meta name="google-site-verification" content="Jo3ECkEdUkSdkoL2MqnmqaG1Y_8dRqYcbyYB3d7U0tE" />
-        <meta name="msvalidate.01" content="">
         <meta property="og:title" content="燈心塾｜AI×個別で伸ばすオンライン専門塾">
         <meta property="og:description" content="AI×個別指導で効率よく伸ばす。入会金無料キャンペーン実施中。">
         <meta property="og:type" content="website">
@@ -816,7 +815,7 @@
                 </div>
             </div>
             <div class="copyright">
-                <p>&copy; 2025 燈心塾. All Rights Reserved.</p>
+                <p>&copy; 2026 燈心塾. All Rights Reserved.</p>
             </div>
         </div>
     </footer>
@@ -1177,103 +1176,351 @@
         }
     </style>
 
-    <script>
-        // AIチャットボット JavaScript
-        (function() {
-            // 設定ファイル（js/config.js）からURLを取得
-            const WEB_APP_URL = window.CHAT_CONFIG?.WEB_APP_URL || '';
+        <script>
 
-            const chatToggleBtn = document.getElementById('chat-toggle-btn');
-            const chatWindow = document.getElementById('chat-window');
-            const chatCloseBtn = document.getElementById('chat-close-btn');
-            const chatMessages = document.getElementById('chat-messages');
-            const chatInput = document.getElementById('chat-input');
-            const chatSendBtn = document.getElementById('chat-send-btn');
-            const aiChatCTA = document.getElementById('ai-chat-cta');
+            // AIチャットボット JavaScript
 
-            // ユーザーID生成
-            let userId = localStorage.getItem('chatUserId');
-            if (!userId) {
-                userId = 'web-' + Date.now() + '-' + Math.random().toString(36).substr(2, 9);
-                localStorage.setItem('chatUserId', userId);
-            }
+            (function() {
 
-            function openChatWindow() {
-                chatWindow.style.display = 'flex';
-                chatToggleBtn.style.display = 'none';
-                chatInput.focus();
-            }
+                // 設定ファイル（js/config.js）からURLを取得
 
-            // チャットウィンドウの開閉
-            chatToggleBtn.addEventListener('click', function() {
-                openChatWindow();
-            });
+                const WEB_APP_URL = window.CHAT_CONFIG?.WEB_APP_URL || '';
 
-            if (aiChatCTA) {
-                aiChatCTA.addEventListener('click', function() {
-                    openChatWindow();
-                });
-            }
+    
 
-            chatCloseBtn.addEventListener('click', function() {
-                chatWindow.style.display = 'none';
-                chatToggleBtn.style.display = 'flex';
-            });
+                const chatToggleBtn = document.getElementById('chat-toggle-btn');
 
-            // メッセージ追加
-            function addMessage(text, isUser = false) {
-                const messageDiv = document.createElement('div');
-                messageDiv.className = isUser ? 'user-message' : 'bot-message';
+                const chatWindow = document.getElementById('chat-window');
 
-                const contentDiv = document.createElement('div');
-                contentDiv.className = 'message-content';
-                contentDiv.textContent = text;
+                const chatCloseBtn = document.getElementById('chat-close-btn');
 
-                messageDiv.appendChild(contentDiv);
-                chatMessages.appendChild(messageDiv);
-                chatMessages.scrollTop = chatMessages.scrollHeight;
-            }
+                const chatMessages = document.getElementById('chat-messages');
 
-            // タイピングインジケーター
-            function showTyping() {
-                const typing = document.createElement('div');
-                typing.className = 'bot-message';
-                typing.id = 'typing-indicator-msg';
-                typing.innerHTML = '<div class="typing-indicator"><span></span><span></span><span></span></div>';
-                chatMessages.appendChild(typing);
-                chatMessages.scrollTop = chatMessages.scrollHeight;
-            }
+                const chatInput = document.getElementById('chat-input');
 
-            function hideTyping() {
-                const typing = document.getElementById('typing-indicator-msg');
-                if (typing) typing.remove();
-            }
+                const chatSendBtn = document.getElementById('chat-send-btn');
 
-            // メッセージ送信（準備中メッセージを返す）
-            async function sendMessage() {
-                const message = chatInput.value.trim();
-                if (!message) return;
+                const aiChatCTA = document.getElementById('ai-chat-cta');
 
-                addMessage(message, true);
-                chatInput.value = '';
-                showTyping();
+    
 
-                // 準備中メッセージ
-                setTimeout(() => {
-                    hideTyping();
-                    addMessage('準備中だワン！🐕\n\nもうしばらくお待ちくださいワン！');
-                }, 1000);
-            }
+                // ユーザーID生成
 
-            // イベントリスナー
-            chatSendBtn.addEventListener('click', sendMessage);
-            chatInput.addEventListener('keypress', function(e) {
-                if (e.key === 'Enter') {
-                    sendMessage();
+                let userId = localStorage.getItem('chatUserId');
+
+                if (!userId) {
+
+                    userId = 'web-' + Date.now() + '-' + Math.random().toString(36).substr(2, 9);
+
+                    localStorage.setItem('chatUserId', userId);
+
                 }
-            });
-        })();
-    </script>
+
+    
+
+                // --- ナレッジベースの定義 ---
+
+                const knowledgeBase = [
+
+                    {
+
+                        keywords: ['料金', '値段', '費用', 'いくら', 'プラン', '月額'],
+
+                        answer: "料金プランは、1科目で月額20,000円（税込）、2科目で月額35,000円（税込）、3科目で月額50,000円（税込）です。教材費やシステム利用料などの追加料金は一切ありませんのでご安心ください。また、授業なしで学習相談ができる月額5,000円のコンサルプランもございます。今なら入会金10,000円が無料になるキャンペーン中です！"
+
+                    },
+
+                    {
+
+                        keywords: ['支払い', '支払方法', '振込'],
+
+                        answer: "お支払い方法は、現在は銀行振込のみ対応しております。口座振替やオンライン決済は準備が整い次第、ご案内いたします。"
+
+                    },
+
+                    {
+
+                        keywords: ['授業', '内容', '科目', '教科'],
+
+                        answer: "授業はすべてオンラインで行います。主な対応科目は英語、数学、国語、理科、社会です。その他、AI授業、小論文・面接対策、推薦入試対策、看護師国家試験対策といった特別サポートも充実しています。ご希望の科目があればお気軽にご相談くださいね。"
+
+                    },
+
+                    {
+
+                        keywords: ['時間', '時間割', '何時'],
+
+                        answer: "授業は1コマ50分で、夕方17:00から20:50まで4つの時間帯があります。学習リズムを作りやすい固定時間割制ですが、急なご予定の場合は振替も可能ですのでご安心ください。"
+
+                    },
+
+                    {
+
+                        keywords: ['体験', '無料', '試す', 'トライアル'],
+
+                        answer: "無料体験では、ご希望の科目の授業を2コマまで受講いただけます。また、最初の面談で学習状況や目標を伺い、最適な学習プランをご提案することも可能です。LINEから「体験授業希望」と送るだけで簡単にお申し込みできますよ。"
+
+                    },
+
+                    {
+
+                        keywords: ['振替', '休む', '休み'],
+
+                        answer: "はい、振替は可能です。授業開始の24時間前までにご連絡いただければ、月に2回まで無料で振替できます。急な体調不良や予定の変更があっても安心です。"
+
+                    },
+
+                    {
+
+                        keywords: ['学年', '対象', '誰'],
+
+                        answer: "小学生から高校生、大学受験生はもちろん、学び直しをしたい社会人の方まで、年齢に関わらず幅広く対応しています。一人ひとりの目標に合わせてサポートしますので、ぜひご相談ください。"
+
+                    },
+
+                    {
+
+                        keywords: ['場所', 'どこ', 'オンライン', '通塾'],
+
+                        answer: "燈心塾は完全オンラインの専門塾ですので、全国どこからでも受講いただけます。塾への送り迎えも不要です。"
+
+                    },
+
+                    {
+
+                        keywords: ['先生', '講師', '教えてくれる人'],
+
+                        answer: "代表の鶴村は指導歴10年以上で、AI開発も手掛けるエンジニアです。他にも、看護入試に強い女性講師や、難関大出身の専門講師が多数在籍しており、生徒さんの目標に合わせて最適な講師が担当します。"
+
+                    },
+
+                    {
+
+                        keywords: ['こんにちは', 'やあ', 'どうも'],
+
+                        answer: "こんにちは！灯ちゃんだよ。何かお手伝いできることはあるかな？料金や授業のこと、なんでも聞いてね！"
+
+                    },
+
+                    {
+
+                        keywords: ['ありがとう', '助かった'],
+
+                        answer: "どういたしまして！いつでも声をかけてね！"
+
+                    }
+
+                ];
+
+    
+
+                const greetings = ["はい！", "もちろんです！", "お答えしますね！"];
+
+                const closings = ["についてですね。", "のことですね。"];
+
+                const unknownAnswers = [
+
+                    "ごめんなさい、その質問はちょっと難しいワン…。もう少し簡単な言葉で聞いてくれる？",
+
+                    "うーん、よく分からなかったです。例えば「料金について」や「授業の内容」のように、キーワードを入れて質問してみてください！",
+
+                    "ごめんなさい、まだ勉強中なんです。公式サイトを見ていただくか、別の言葉で質問していただけると嬉しいです。"
+
+                ];
+
+    
+
+                function openChatWindow() {
+
+                    chatWindow.style.display = 'flex';
+
+                    chatToggleBtn.style.display = 'none';
+
+                    chatInput.focus();
+
+                }
+
+    
+
+                // チャットウィンドウの開閉
+
+                chatToggleBtn.addEventListener('click', openChatWindow);
+
+                if (aiChatCTA) {
+
+                    aiChatCTA.addEventListener('click', openChatWindow);
+
+                }
+
+                chatCloseBtn.addEventListener('click', function() {
+
+                    chatWindow.style.display = 'none';
+
+                    chatToggleBtn.style.display = 'flex';
+
+                });
+
+    
+
+                // メッセージ追加
+
+                function addMessage(text, isUser = false) {
+
+                    const messageDiv = document.createElement('div');
+
+                    messageDiv.className = isUser ? 'user-message' : 'bot-message';
+
+    
+
+                    const contentDiv = document.createElement('div');
+
+                    contentDiv.className = 'message-content';
+
+                    // テキスト内の改行を<br>に変換
+
+                    contentDiv.innerHTML = text.replace(/\n/g, '<br>');
+
+    
+
+                    messageDiv.appendChild(contentDiv);
+
+                    chatMessages.appendChild(messageDiv);
+
+                    chatMessages.scrollTop = chatMessages.scrollHeight;
+
+                }
+
+    
+
+                // タイピングインジケーター
+
+                function showTyping() {
+
+                    const typing = document.createElement('div');
+
+                    typing.className = 'bot-message';
+
+                    typing.id = 'typing-indicator-msg';
+
+                    typing.innerHTML = '<div class="typing-indicator"><span></span><span></span><span></span></div>';
+
+                    chatMessages.appendChild(typing);
+
+                    chatMessages.scrollTop = chatMessages.scrollHeight;
+
+                }
+
+    
+
+                function hideTyping() {
+
+                    const typing = document.getElementById('typing-indicator-msg');
+
+                    if (typing) typing.remove();
+
+                }
+
+    
+
+                // 応答生成ロジック
+
+                function getResponse(userInput) {
+
+                    const lowerInput = userInput.toLowerCase();
+
+    
+
+                    for (const qa of knowledgeBase) {
+
+                        for (const keyword of qa.keywords) {
+
+                            if (lowerInput.includes(keyword)) {
+
+                                // 50%の確率で接頭辞をつけ、自然さを演出
+
+                                if (qa.keywords.includes('こんにちは') || qa.keywords.includes('ありがとう')) {
+
+                                    return qa.answer; // 挨拶には接頭辞をつけない
+
+                                }
+
+                                if (Math.random() > 0.5) {
+
+                                    const randomGreeting = greetings[Math.floor(Math.random() * greetings.length)];
+
+                                    const randomClosing = closings[Math.floor(Math.random() * closings.length)];
+
+                                    return `${randomGreeting}「${keyword}」${randomClosing}\n\n${qa.answer}`;
+
+                                }
+
+                                return qa.answer;
+
+                            }
+
+                        }
+
+                    }
+
+                    // マッチしなかった場合
+
+                    return unknownAnswers[Math.floor(Math.random() * unknownAnswers.length)];
+
+                }
+
+    
+
+                // メッセージ送信
+
+                async function sendMessage() {
+
+                    const message = chatInput.value.trim();
+
+                    if (!message) return;
+
+    
+
+                    addMessage(message, true);
+
+                    chatInput.value = '';
+
+                    showTyping();
+
+    
+
+                    // 少し間をあけて自然さを演出
+
+                    setTimeout(() => {
+
+                        hideTyping();
+
+                        const response = getResponse(message);
+
+                        addMessage(response);
+
+                    }, 1200);
+
+                }
+
+    
+
+                // イベントリスナー
+
+                chatSendBtn.addEventListener('click', sendMessage);
+
+                chatInput.addEventListener('keypress', function(e) {
+
+                    if (e.key === 'Enter') {
+
+                        sendMessage();
+
+                    }
+
+                });
+
+            })();
+
+        </script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
